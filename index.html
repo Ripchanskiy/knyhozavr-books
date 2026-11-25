@@ -66,7 +66,7 @@ h2 {
 }
 
 .book {
-  display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: start;
+  display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; align-items: start;
   background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
   padding: 20px; margin-bottom: 14px;
 }
@@ -130,7 +130,7 @@ footer { padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
 @media (max-width: 560px) {
   header { padding-top: 28px; }
   h1 { font-size: 28px; }
-  .book { padding: 16px; grid-template-columns: 84px minmax(0, 1fr); gap: 14px; }
+  .book { padding: 16px; grid-template-columns: 112px minmax(0, 1fr); gap: 14px; }
   .book .files { grid-column: 1 / -1; }
   .book details { grid-column: 1 / -1; }
   .btn { flex: 1 1 140px; justify-content: center; }
@@ -254,7 +254,8 @@ function group(releases) {
       notes,
       url: r.html_url,
       cover: all.find((a) => isCover(a.name)),
-      assets: all.filter((a) => !isCover(a.name)), // the cover is for this page, not a download
+      // downloads for readers only: not the cover, not <book>.work.zip (the app restores a book from it)
+      assets: all.filter((a) => a.ext === "epub" || a.ext === "md"),
     };
     if (!books.has(m[1])) books.set(m[1], []);
     books.get(m[1]).push(v);
@@ -302,13 +303,11 @@ function fileButtons(v, primary) {
 }
 
 function bookCard(b, q) {
-  const [last, ...older] = b.versions;
+  const [last] = b.versions; // readers get the newest version; older ones stay in GitHub Releases
   const downloads = b.versions.reduce((n, v) => n + v.assets.reduce((m, a) => m + a.downloads, 0), 0);
   const cover = b.versions.find((v) => v.cover)?.cover;
   const body = el("div", {},
-    el("div", { class: "book-head" },
-      el("h3", {}, highlight(last.title, q)),
-      el("span", { class: "tag" }, `версія ${last.version}`)),
+    el("div", { class: "book-head" }, el("h3", {}, highlight(last.title, q))),
     last.author && el("p", { class: "author" }, highlight(last.author, q)),
     last.original && last.original !== `${last.author}. ${last.title}` &&
       el("p", { class: "original", lang: "en" }, highlight(last.original, q)),
@@ -318,18 +317,10 @@ function bookCard(b, q) {
     last.notes && el("p", { class: "notes" }, last.notes));
   const card = el("article", { class: cover ? "book" : "book no-cover", id: b.id },
     cover && el("img", {
-      class: "cover", src: cover.url, alt: `Обкладинка: ${last.title}`, loading: "lazy", width: "120", height: "180",
+      class: "cover", src: cover.url, alt: `Обкладинка: ${last.title}`, loading: "lazy", width: "180", height: "270",
     }),
     body,
     fileButtons(last, true));
-  if (older.length) {
-    card.append(el("details", {},
-      el("summary", {}, `Попередні версії (${older.length})`),
-      ...older.map((v) => el("div", { class: "old" },
-        el("strong", {}, `Версія ${v.version}`),
-        el("span", { class: "when" }, dateFmt.format(v.date)),
-        ...v.assets.map((a) => el("a", { href: a.url, download: "" }, `${a.ext.toUpperCase()} · ${size(a.size)}`))))));
-  }
   return card;
 }
 
