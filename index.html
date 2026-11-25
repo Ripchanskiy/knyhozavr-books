@@ -249,6 +249,7 @@ function group(releases) {
       title: meta.title || (r.name || m[1]).replace(/\s+v\d+$/, ""),
       author: meta.author || "",
       original: meta.original || "",
+      models: meta.models || "",
       date: new Date(r.published_at || r.created_at),
       notes,
       url: r.html_url,
@@ -313,6 +314,7 @@ function bookCard(b, q) {
       el("p", { class: "original", lang: "en" }, highlight(last.original, q)),
     el("p", { class: "meta" },
       `${dateFmt.format(last.date)} · ${numFmt.format(downloads)} ${plural(downloads, "завантаження", "завантаження", "завантажень")}`),
+    last.models && el("p", { class: "meta" }, `Машинний переклад: ${last.models}, вичитка людьми`),
     last.notes && el("p", { class: "notes" }, last.notes));
   const card = el("article", { class: cover ? "book" : "book no-cover", id: b.id },
     cover && el("img", {
