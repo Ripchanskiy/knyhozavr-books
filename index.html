@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Книгозавр</title>
+<meta name="description" content="Українські переклади книжок у суспільному надбанні: EPUB і Markdown, безкоштовно.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root {
+  --bg: #f7f4ec;
+  --panel: #fffdf8;
+  --text: #22201b;
+  --muted: #736d60;
+  --line: #e3ddcf;
+  --accent: #2f6b4f;
+  --accent-text: #ffffff;
+  --accent-soft: #e2efe6;
+  --warn: #9a5b00;
+  --warn-soft: #fbefd9;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161714;
+    --panel: #1f201c;
+    --text: #ebe7dc;
+    --muted: #a39d8f;
+    --line: #34352f;
+    --accent: #7ccaa0;
+    --accent-text: #0f1a14;
+    --accent-soft: #1d3127;
+    --warn: #f0b660;
+    --warn-soft: #3a2c14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161714; --panel: #1f201c; --text: #ebe7dc; --muted: #a39d8f; --line: #34352f;
+  --accent: #7ccaa0; --accent-text: #0f1a14; --accent-soft: #1d3127; --warn: #f0b660; --warn-soft: #3a2c14;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+a { color: var(--accent); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+header { padding: 40px 0 24px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand img { width: 52px; height: 52px; border-radius: 12px; flex: none; }
+h1 {
+  margin: 0; font: 700 34px/1.1 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  letter-spacing: -.01em;
+}
+.lead { margin: 16px 0 0; max-width: 60ch; color: var(--muted); font-size: 17px; }
+
+h2 {
+  margin: 32px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+.book {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px; margin-bottom: 14px;
+}
+.book-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.book h3 {
+  margin: 0; font: 600 24px/1.2 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+.tag {
+  font-size: 13px; padding: 1px 9px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); white-space: nowrap;
+}
+.meta { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+.notes { margin: 14px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+
+.files { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px;
+  border-radius: 10px; border: 1px solid var(--accent); text-decoration: none; font-weight: 600;
+}
+.btn.primary { background: var(--accent); color: var(--accent-text); }
+.btn.secondary { background: transparent; color: var(--accent); }
+.btn small { font-weight: 400; opacity: .8; }
+.btn:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+details { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }
+summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+.old { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; padding: 10px 0; font-size: 14px; }
+.old + .old { border-top: 1px dashed var(--line); }
+.old .when { color: var(--muted); }
+
+.state {
+  background: var(--panel); border: 1px dashed var(--line); border-radius: 14px;
+  padding: 28px 20px; color: var(--muted); text-align: center;
+}
+.state.err { border-style: solid; background: var(--warn-soft); color: var(--warn); text-align: left; }
+
+.about { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+.about p { margin: 0 0 10px; max-width: 70ch; }
+footer { padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 560px) {
+  header { padding-top: 28px; }
+  h1 { font-size: 28px; }
+  .book { padding: 16px; }
+  .btn { flex: 1 1 140px; justify-content: center; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <img src="favicon.png" alt="" width="52" height="52">
+      <h1>Книгозавр</h1>
+    </div>
+    <p class="lead">
+      Українські переклади книжок у суспільному надбанні. Машинний переклад, який вичитують і виправляють люди.
+      Безкоштовно, без реєстрації.
+    </p>
+  </header>
+
+  <main>
+    <h2>Книжки</h2>
+    <div id="books" aria-live="polite"><div class="state">Завантаження…</div></div>
+
+    <section class="about">
+      <p>
+        <strong>Як читати.</strong> EPUB відкривається на телефоні (Apple Books, Google Play Книги, ReadEra),
+        у читалках PocketBook і Kobo. Kindle приймає EPUB через «Send to Kindle».
+        MD — простий текст, зручний для порівняння версій і цитат.
+      </p>
+      <p>
+        <strong>Якість.</strong> Це не літературний переклад: трапляються помилки й неоковирні фрази.
+        Кожна нова версія містить схвалені правки. Знайшли помилку?
+        <a id="issues" href="https://github.com/Ripchanskiy/knyhozavr-books/issues">Напишіть нам</a>:
+        вкажіть книжку, версію і процитуйте абзац.
+      </p>
+      <p>
+        <strong>Ліцензія.</strong> Переклади передано в суспільне надбання
+        (<a href="https://creativecommons.org/publicdomain/zero/1.0/deed.uk">CC0</a>): їх можна вільно копіювати
+        й поширювати.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    Файли зберігаються на <a id="repo" href="https://github.com/Ripchanskiy/knyhozavr-books/releases">GitHub</a>.
+  </footer>
+</div>
+
+<script>
+// Books come straight from the GitHub Releases of this repo: one release per version, tag "<book>-v<N>".
+// Nothing to rebuild: a new release shows up here on the next visit.
+const REPO = "Ripchanskiy/knyhozavr-books";
+const API = `https://api.github.com/repos/${REPO}/releases?per_page=100`;
+const CACHE_KEY = "knyhozavr.releases";
+const CACHE_MS = 10 * 60 * 1000; // anonymous API calls are limited to 60 per hour per visitor
+
+const dateFmt = new Intl.DateTimeFormat("uk-UA", { day: "numeric", month: "long", year: "numeric" });
+const numFmt = new Intl.NumberFormat("uk-UA");
+
+function el(tag, attrs = {}, ...children) {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") e.className = v;
+    else e.setAttribute(k, v);
+  }
+  for (const c of children) if (c != null && c !== false) e.append(c);
+  return e;
+}
+
+function size(bytes) {
+  return bytes < 1024 * 1024
+    ? `${Math.max(1, Math.round(bytes / 1024))} КБ`
+    : `${(bytes / 1024 / 1024).toFixed(1).replace(".", ",")} МБ`;
+}
+
+function plural(n, one, few, many) {
+  const m10 = n % 10, m100 = n % 100;
+  if (m10 === 1 && m100 !== 11) return one;
+  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
+  return many;
+}
+
+/** GitHub releases -> books, each with its versions newest first; books with the newest release first. */
+function group(releases) {
+  const books = new Map();
+  for (const r of releases) {
+    if (r.draft || r.prerelease) continue;
+    const m = /^(.+)-v(\d+)$/.exec(r.tag_name || "");
+    if (!m) continue;
+    const v = {
+      version: Number(m[2]),
+      tag: r.tag_name,
+      title: (r.name || m[1]).replace(/\s+v\d+$/, ""),
+      date: new Date(r.published_at || r.created_at),
+      notes: (r.body || "").trim(),
+      url: r.html_url,
+      assets: (r.assets || []).map((a) => ({
+        name: a.name, url: a.browser_download_url, size: a.size, downloads: a.download_count,
+        ext: a.name.split(".").pop().toLowerCase(),
+      })),
+    };
+    if (!books.has(m[1])) books.set(m[1], []);
+    books.get(m[1]).push(v);
+  }
+  return [...books.entries()]
+    .map(([id, versions]) => ({ id, versions: versions.sort((a, b) => b.version - a.version) }))
+    .sort((a, b) => b.versions[0].date - a.versions[0].date);
+}
+
+function fileButtons(v, primary) {
+  const order = { epub: 0, md: 1 };
+  const files = [...v.assets].sort((a, b) => (order[a.ext] ?? 9) - (order[b.ext] ?? 9));
+  return el("div", { class: "files" }, ...files.map((a, i) =>
+    el("a", {
+      class: `btn ${primary && i === 0 ? "primary" : "secondary"}`,
+      href: a.url,
+      download: "",
+      "aria-label": `Завантажити ${a.ext.toUpperCase()}, ${size(a.size)}`,
+    }, `⬇ ${a.ext.toUpperCase()}`, el("small", {}, size(a.size)))));
+}
+
+function bookCard(b) {
+  const [last, ...older] = b.versions;
+  const downloads = b.versions.reduce((n, v) => n + v.assets.reduce((m, a) => m + a.downloads, 0), 0);
+  const card = el("article", { class: "book", id: b.id },
+    el("div", { class: "book-head" },
+      el("h3", {}, last.title),
+      el("span", { class: "tag" }, `версія ${last.version}`)),
+    el("p", { class: "meta" },
+      `${dateFmt.format(last.date)} · ${numFmt.format(downloads)} ${plural(downloads, "завантаження", "завантаження", "завантажень")}`),
+    last.notes && el("p", { class: "notes" }, last.notes),
+    fileButtons(last, true));
+  if (older.length) {
+    card.append(el("details", {},
+      el("summary", {}, `Попередні версії (${older.length})`),
+      ...older.map((v) => el("div", { class: "old" },
+        el("strong", {}, `Версія ${v.version}`),
+        el("span", { class: "when" }, dateFmt.format(v.date)),
+        ...v.assets.map((a) => el("a", { href: a.url, download: "" }, `${a.ext.toUpperCase()} · ${size(a.size)}`))))));
+  }
+  return card;
+}
+
+function render(releases) {
+  const root = document.getElementById("books");
+  const books = group(releases);
+  root.replaceChildren(...(books.length
+    ? books.map(bookCard)
+    : [el("div", { class: "state" }, "Перші книжки ще вичитуються. Загляньте трохи згодом.")]));
+}
+
+function showError(message) {
+  document.getElementById("books").replaceChildren(el("div", { class: "state err" },
+    message, " Файли можна завантажити прямо з ",
+    el("a", { href: `https://github.com/${REPO}/releases` }, "GitHub"), "."));
+}
+
+async function load() {
+  try {
+    const cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || "null");
+    if (cached && Date.now() - cached.at < CACHE_MS) return render(cached.data);
+  } catch { /* storage blocked or broken: just ask GitHub */ }
+  try {
+    const res = await fetch(API, { headers: { Accept: "application/vnd.github+json" } });
+    if (res.status === 403 || res.status === 429) {
+      return showError("GitHub тимчасово обмежив кількість запитів з вашої мережі. Спробуйте за годину.");
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), data })); } catch { /* ignore */ }
+    render(data);
+  } catch (e) {
+    showError("Не вдалося завантажити список книжок.");
+  }
+}
+
+load();
+</script>
+</body>
+</html>
