@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T11:47:21+00:00",
+ "generated_at": "2026-11-26T13:13:29+00:00",
  "books": [
   {
    "id": "a-e-w-mason-at-the-villa-rose",
@@ -11,7 +11,7 @@
    "title": "У віллі «Роза»",
    "author": "А. Е. В. Мейсон",
    "original": "A. E. W. Mason. At the Villa Rose",
-   "models": "MamayLM 27B, Книгозавр (службовий текст) (2 абз.)",
+   "models": "MamayLM 27B",
    "reviewed": 0,
    "complete": false,
    "reviewers": [],
