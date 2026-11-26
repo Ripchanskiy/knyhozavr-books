@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T13:36:58+00:00",
+ "generated_at": "2026-11-26T13:37:25+00:00",
  "books": [
+  {
+   "id": "a-merritt-the-moon-pool",
+   "version": 1,
+   "tag": "a-merritt-the-moon-pool-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-merritt-the-moon-pool-v1",
+   "date": "2026-11-26T13:37:24Z",
+   "title": "Місячна заплава",
+   "author": "А. Мерріт",
+   "original": "A. Merritt. The Moon Pool",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Наукова фантастика"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-merritt/the-moon-pool",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-merritt-the-moon-pool-v1/a-merritt-the-moon-pool.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-merritt-the-moon-pool.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-merritt-the-moon-pool-v1/a-merritt-the-moon-pool.uk.epub",
+     "size": 644933
+    },
+    {
+     "ext": "md",
+     "name": "a-merritt-the-moon-pool.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-merritt-the-moon-pool-v1/a-merritt-the-moon-pool.uk.md",
+     "size": 986161
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "ada-elizabeth-chesterton-in-darkest-london",
    "version": 1,
