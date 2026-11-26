@@ -49,7 +49,7 @@ body {
   font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 a { color: var(--accent); }
-.wrap { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+.wrap { margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px); } /* full width; texts keep their own measure */
 
 header { padding: 40px 0 24px; }
 .brand { display: flex; align-items: center; gap: 14px; }
@@ -58,25 +58,45 @@ h1 {
   margin: 0; font: 700 34px/1.1 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   letter-spacing: -.01em;
 }
-.lead { margin: 16px 0 0; max-width: 60ch; color: var(--muted); font-size: 17px; }
+.intro { margin-top: 24px; }
+.tagline { margin: 0; font: 600 28px/1.25 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; }
+.lead { margin: 12px 0 0; max-width: 75ch; color: var(--muted); font-size: 17px; line-height: 1.55; text-wrap: pretty; }
+.steps {
+  list-style: none; counter-reset: step; margin: 22px 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; max-width: 1100px;
+}
+.steps li {
+  counter-increment: step; display: grid; grid-template-columns: 32px minmax(0, 1fr); column-gap: 12px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
+}
+.steps li::before {
+  content: counter(step); grid-row: span 2; width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 700;
+}
+.steps strong { font-size: 15px; }
+.steps span { font-size: 14px; color: var(--muted); line-height: 1.45; }
+@media (max-width: 860px) { .steps { grid-template-columns: minmax(0, 1fr); } .tagline { font-size: 22px; } }
 
 h2 {
   margin: 32px 0 12px; font-size: 13px; font-weight: 600; letter-spacing: .08em;
   text-transform: uppercase; color: var(--muted);
 }
 
+/* 4 books in a row on a wide screen, then 3, 2 (cover on top, text under it) */
+/* as many book-sized columns as fit; the card is exactly as wide as its cover */
+#books { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px 24px; }
+#books > .state { grid-column: 1 / -1; }
 .book {
-  display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; align-items: start;
-  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
-  padding: 20px; margin-bottom: 14px;
+  display: flex; flex-direction: column; overflow: hidden;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
 }
-.book.no-cover { grid-template-columns: minmax(0, 1fr); }
-.book > .files, .book > details { grid-column: 2; margin-top: 0; }
-.book.no-cover > * { grid-column: 1; }
-.book > img.cover { grid-row: span 3; }
+.book > div, .book > .files { padding: 0 14px; }
+.book > div { padding-top: 12px; }
+.book.no-cover > div { padding-top: 16px; }
+.book > .files { margin-top: auto; padding-top: 14px; padding-bottom: 14px; } /* buttons line up at the bottom of each row */
 .cover {
-  width: 100%; aspect-ratio: 2 / 3; object-fit: cover; display: block;
-  border-radius: 6px; background: var(--line); box-shadow: 0 1px 3px rgba(0, 0, 0, .18);
+  width: 100%; height: auto; flex: none; /* height: auto, or the img's height="…" crops it */
+  aspect-ratio: 2 / 3; object-fit: cover; display: block; background: var(--line);
 }
 .author { margin: 4px 0 0; font-size: 17px; }
 .original { margin: 2px 0 0; font-size: 14px; color: var(--muted); font-style: italic; }
@@ -92,16 +112,29 @@ h2 {
 mark { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 1px; }
 .book-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
 .book h3 {
-  margin: 0; font: 600 24px/1.2 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  margin: 0; font: 600 18px/1.25 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
 }
 .tag {
   font-size: 13px; padding: 1px 9px; border-radius: 999px;
   background: var(--accent-soft); color: var(--accent); white-space: nowrap;
 }
 .meta { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
-.notes { margin: 14px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
+.tag.ok { background: var(--accent); color: var(--accent-text); }
+.cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.chip {
+  font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--panel); color: var(--text);
+}
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.chip:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.notes {
+  margin: 12px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px;
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
 
-.files { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.files { display: flex; flex-direction: column; gap: 8px; }
+.book .btn { justify-content: center; padding: 8px 10px; white-space: nowrap; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px;
   border-radius: 10px; border: 1px solid var(--accent); text-decoration: none; font-weight: 600;
@@ -123,18 +156,27 @@ summary { cursor: pointer; color: var(--muted); font-size: 14px; }
 }
 .state.err { border-style: solid; background: var(--warn-soft); color: var(--warn); text-align: left; }
 
-.about { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
-.about p { margin: 0 0 10px; max-width: 70ch; }
-footer { padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
+.about {
+  margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px;
+  text-align: center;
+}
+.about p { margin: 0 auto 12px; max-width: 70ch; text-wrap: pretty; }
+footer { padding: 16px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+
+.search { max-width: 640px; }
 
 @media (max-width: 560px) {
   header { padding-top: 28px; }
   h1 { font-size: 28px; }
-  .book { padding: 16px; grid-template-columns: 112px minmax(0, 1fr); gap: 14px; }
-  .book .files { grid-column: 1 / -1; }
-  .book details { grid-column: 1 / -1; }
-  .btn { flex: 1 1 140px; justify-content: center; }
+  #books { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+  .book > div, .book > .files { padding-left: 10px; padding-right: 10px; }
+  .book h3 { font-size: 17px; }
+  .author { font-size: 15px; }
+  .original, .meta { font-size: 12px; }
+  .notes { display: none; }
+  .book .btn { min-height: 40px; }
 }
+@media (max-width: 340px) { #books { grid-template-columns: minmax(0, 1fr); } }
 </style>
 </head>
 <body>
@@ -144,10 +186,21 @@ footer { padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
       <img src="favicon.png" alt="" width="52" height="52">
       <h1>Книгозавр</h1>
     </div>
-    <p class="lead">
-      Українські переклади книжок у суспільному надбанні. Машинний переклад, який вичитують і виправляють люди.
-      Безкоштовно, без реєстрації.
-    </p>
+    <div class="intro">
+      <div>
+        <p class="tagline">Класика українською. Вільно й безкоштовно.</p>
+        <p class="lead">
+          Ми беремо книжки, на які вже не діє авторське право, і перекладаємо їх українською мовною моделлю.
+          Потім люди вичитують переклад і виправляють помилки, а книжка виходить новою версією.
+        </p>
+        <p class="lead">Усі книжки у форматах EPUB і MD.</p>
+      </div>
+      <ol class="steps" aria-label="Як з'являється книжка">
+        <li><strong>Оригінал</strong><span>Вільне від авторського права видання, переважно зі Standard Ebooks.</span></li>
+        <li><strong>Машинний переклад</strong><span>Українська мовна модель MamayLM перекладає абзац за абзацом.</span></li>
+        <li><strong>Вичитка</strong><span>Люди пропонують правки, редактор їх схвалює, і виходить нова версія.</span></li>
+      </ol>
+    </div>
   </header>
 
   <main>
@@ -156,19 +209,22 @@ footer { padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <input id="q" type="search" placeholder="Пошук за назвою або автором" aria-label="Пошук за назвою або автором" autocomplete="off">
     </div>
+    <div class="cats" id="cats" role="group" aria-label="Категорії" hidden></div>
     <p class="found" id="found" aria-live="polite"></p>
     <div id="books"><div class="state">Завантаження…</div></div>
 
     <section class="about">
       <p>
         <strong>Як читати.</strong> EPUB відкривається на телефоні (Apple Books, Google Play Книги, ReadEra),
-        у читалках PocketBook і Kobo. Kindle приймає EPUB через «Send to Kindle».
+        у читалках PocketBook і Kobo. Kindle приймає EPUB через
+        <a href="https://www.amazon.com/sendtokindle" target="_blank" rel="noopener">Send to Kindle</a>.
         MD — простий текст, зручний для порівняння версій і цитат.
       </p>
       <p>
         <strong>Якість.</strong> Це не літературний переклад: трапляються помилки й неоковирні фрази.
         Кожна нова версія містить схвалені правки. Знайшли помилку?
-        <a id="issues" href="https://github.com/Ripchanskiy/knyhozavr-books/issues" target="_blank" rel="noopener">Напишіть нам</a>:
+        Напишіть на <a href="mailto:sergeyripchanskiy@gmail.com?subject=%D0%9A%D0%BD%D0%B8%D0%B3%D0%BE%D0%B7%D0%B0%D0%B2%D1%80">sergeyripchanskiy@gmail.com</a>
+        або відкрийте <a id="issues" href="https://github.com/Ripchanskiy/knyhozavr-books/issues" target="_blank" rel="noopener">issue на GitHub</a>:
         вкажіть книжку, версію і процитуйте абзац.
       </p>
       <p>
@@ -250,6 +306,9 @@ function group(releases) {
       author: meta.author || "",
       original: meta.original || "",
       models: meta.models || "",
+      reviewed: Number(meta.reviewed) || 0, // approved human edits; 0 (or an older release): machine only
+      categories: Array.isArray(meta.categories) ? meta.categories.map(String) : [],
+      source: /^https:\/\//.test(meta.source || "") ? meta.source : "", // the original's page
       date: new Date(r.published_at || r.created_at),
       notes,
       url: r.html_url,
@@ -270,9 +329,14 @@ function norm(s) {
   return (s || "").toLocaleLowerCase("uk").replace(/[ʼ’'`]/g, "'").replace(/ё/g, "е").replace(/\s+/g, " ").trim();
 }
 
+function sourceName(url) {
+  const host = new URL(url).hostname.replace(/^www\./, "");
+  return { "standardebooks.org": "Standard Ebooks", "gutenberg.org": "Project Gutenberg" }[host] || host;
+}
+
 function searchText(b) {
   const v = b.versions[0];
-  return norm([v.title, v.author, v.original].join(" "));
+  return norm([v.title, v.author, v.original, ...v.categories].join(" "));
 }
 
 /** Text with every occurrence of the query marked (case-insensitive, same length after norm). */
@@ -313,7 +377,12 @@ function bookCard(b, q) {
       el("p", { class: "original", lang: "en" }, highlight(last.original, q)),
     el("p", { class: "meta" },
       `${dateFmt.format(last.date)} · ${numFmt.format(downloads)} ${plural(downloads, "завантаження", "завантаження", "завантажень")}`),
-    last.models && el("p", { class: "meta" }, `Машинний переклад: ${last.models}, вичитка людьми`),
+    last.source && el("p", { class: "meta" }, "Оригінал: ",
+      el("a", { href: last.source, target: "_blank", rel: "noopener" }, sourceName(last.source)), " ↗"),
+    last.models && el("p", { class: "meta" }, `Машинний переклад: ${last.models}`),
+    (last.reviewed || last.categories.length) ? el("p", { class: "tags" },
+      last.reviewed ? el("span", { class: "tag ok", title: `Схвалених правок: ${last.reviewed}` }, "✓ вичитано людьми") : null,
+      ...last.categories.map((c) => el("span", { class: "tag" }, c))) : null,
     last.notes && el("p", { class: "notes" }, last.notes));
   const card = el("article", { class: cover ? "book" : "book no-cover", id: b.id },
     cover && el("img", {
@@ -328,6 +397,7 @@ let allBooks = [];
 
 function render(releases) {
   allBooks = group(releases);
+  renderCategories();
   document.getElementById("search-box").hidden = allBooks.length < 2; // nothing to search among 0–1 books
   show();
 }
@@ -340,14 +410,40 @@ function show() {
     return root.replaceChildren(el("div", { class: "state" }, "Перші книжки ще вичитуються. Загляньте трохи згодом."));
   }
   const q = norm(document.getElementById("q").value);
-  const books = q ? allBooks.filter((b) => searchText(b).includes(q)) : allBooks;
-  found.textContent = q ? `Знайдено: ${books.length}` : "";
+  const books = allBooks.filter((b) => (!q || searchText(b).includes(q))
+    && (!category || b.versions[0].categories.includes(category)));
+  found.textContent = q || category ? `Знайдено: ${books.length}` : "";
   root.replaceChildren(...(books.length
     ? books.map((b) => bookCard(b, q))
     : [el("div", { class: "state" }, "Нічого не знайдено. Спробуйте інше слово або прізвище автора.")]));
 }
 
 document.getElementById("q").addEventListener("input", show);
+
+let category = new URLSearchParams(location.search).get("category") || ""; // a shareable filter: ?category=Детектив
+
+function renderCategories() {
+  const counts = new Map();
+  for (const b of allBooks) for (const c of b.versions[0].categories) counts.set(c, (counts.get(c) || 0) + 1);
+  const box = document.getElementById("cats");
+  if (category && !counts.has(category)) category = "";
+  box.hidden = counts.size < 2; // one category for everything filters nothing
+  const chip = (value, label) => {
+    const b = el("button", { type: "button", class: "chip", "aria-pressed": String(category === value) }, label);
+    b.addEventListener("click", () => {
+      category = category === value ? "" : value;
+      const u = new URL(location.href);
+      if (category) u.searchParams.set("category", category); else u.searchParams.delete("category");
+      history.replaceState(null, "", u);
+      renderCategories();
+      show();
+    });
+    return b;
+  };
+  box.replaceChildren(chip("", "Усі"),
+    ...[...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "uk"))
+      .map(([c, n]) => chip(c, `${c} · ${n}`)));
+}
 
 function showError(message) {
   document.getElementById("books").replaceChildren(el("div", { class: "state err" },
