@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T11:34:21+00:00",
+ "generated_at": "2026-11-26T11:34:59+00:00",
  "books": [
+  {
+   "id": "a-p-herbert-the-house-by-the-river",
+   "version": 1,
+   "tag": "a-p-herbert-the-house-by-the-river-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-p-herbert-the-house-by-the-river-v1",
+   "date": "2026-11-26T11:34:58Z",
+   "title": "Дім над річкою",
+   "author": "А. П. Герберт",
+   "original": "A. P. Herbert. The House by the River",
+   "models": "MamayLM 27B, Книгозавр (службовий текст) (2 абз.)",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-p-herbert/the-house-by-the-river",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-p-herbert-the-house-by-the-river-v1/a-p-herbert-the-house-by-the-river.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-p-herbert-the-house-by-the-river.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-p-herbert-the-house-by-the-river-v1/a-p-herbert-the-house-by-the-river.uk.epub",
+     "size": 751230
+    },
+    {
+     "ext": "md",
+     "name": "a-p-herbert-the-house-by-the-river.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-p-herbert-the-house-by-the-river-v1/a-p-herbert-the-house-by-the-river.uk.md",
+     "size": 621666
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "a-e-w-mason-the-prisoner-in-the-opal",
    "version": 1,
