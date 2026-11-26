@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T13:13:50+00:00",
+ "generated_at": "2026-11-26T13:14:13+00:00",
  "books": [
   {
    "id": "a-e-w-mason-at-the-villa-rose",
@@ -82,7 +82,7 @@
    "title": "Дім над річкою",
    "author": "А. П. Герберт",
    "original": "A. P. Herbert. The House by the River",
-   "models": "MamayLM 27B, Книгозавр (службовий текст) (2 абз.)",
+   "models": "MamayLM 27B",
    "reviewed": 0,
    "complete": false,
    "reviewers": [],
