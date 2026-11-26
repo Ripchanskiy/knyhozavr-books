@@ -463,7 +463,7 @@ function show() {
   renderPager(pages);
 }
 
-const PAGE = 48; // books per page: hundreds of covers at once are slow on a phone
+const PAGE = 10; // books per page
 let page = pageFromUrl(), shownFor = null;
 
 function pageFromUrl() {
