@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T14:01:34+00:00",
+ "generated_at": "2026-11-26T15:31:39+00:00",
  "books": [
+  {
+   "id": "adam-smith-the-theory-of-moral-sentiments",
+   "version": 1,
+   "tag": "adam-smith-the-theory-of-moral-sentiments-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/adam-smith-the-theory-of-moral-sentiments-v1",
+   "date": "2026-11-26T15:31:37Z",
+   "title": "Теорія моральних почуттів",
+   "author": "Адам Сміт",
+   "original": "Adam Smith. The Theory of Moral Sentiments",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Філософія"
+   ],
+   "source": "https://standardebooks.org/ebooks/adam-smith/the-theory-of-moral-sentiments",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-theory-of-moral-sentiments-v1/adam-smith-the-theory-of-moral-sentiments.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "adam-smith-the-theory-of-moral-sentiments.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-theory-of-moral-sentiments-v1/adam-smith-the-theory-of-moral-sentiments.uk.epub",
+     "size": 944561
+    },
+    {
+     "ext": "md",
+     "name": "adam-smith-the-theory-of-moral-sentiments.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-theory-of-moral-sentiments-v1/adam-smith-the-theory-of-moral-sentiments.uk.md",
+     "size": 1574733
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani",
    "version": 1,
