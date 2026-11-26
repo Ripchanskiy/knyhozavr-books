@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T10:47:33+00:00",
+ "generated_at": "2026-11-26T11:34:21+00:00",
  "books": [
+  {
+   "id": "a-e-w-mason-the-prisoner-in-the-opal",
+   "version": 1,
+   "tag": "a-e-w-mason-the-prisoner-in-the-opal-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-e-w-mason-the-prisoner-in-the-opal-v1",
+   "date": "2026-11-26T11:34:20Z",
+   "title": "В’язень в опалі",
+   "author": "А. Е. В. Мейсон",
+   "original": "A. E. W. Mason. The Prisoner in the Opal",
+   "models": "MamayLM 27B, Книгозавр (службовий текст) (2 абз.)",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Детектив"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-e-w-mason/the-prisoner-in-the-opal",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-prisoner-in-the-opal-v1/a-e-w-mason-the-prisoner-in-the-opal.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-e-w-mason-the-prisoner-in-the-opal.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-prisoner-in-the-opal-v1/a-e-w-mason-the-prisoner-in-the-opal.uk.epub",
+     "size": 1009769
+    },
+    {
+     "ext": "md",
+     "name": "a-e-w-mason-the-prisoner-in-the-opal.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-prisoner-in-the-opal-v1/a-e-w-mason-the-prisoner-in-the-opal.uk.md",
+     "size": 954183
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "a-e-w-mason-the-house-of-the-arrow",
    "version": 1,
@@ -13,6 +48,8 @@
    "original": "A. E. W. Mason. The House of the Arrow",
    "models": "MamayLM 27B",
    "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
    "categories": [
     "Детектив"
    ],
@@ -46,6 +83,8 @@
    "original": "A. A. Milne. The Red House Mystery",
    "models": "MamayLM 27B",
    "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
    "categories": [
     "Детектив"
    ],
@@ -79,6 +118,8 @@
    "original": "Felix Salten. Bambi",
    "models": "MamayLM 27B",
    "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
    "categories": [
     "Художня проза"
    ],
