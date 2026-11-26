@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T11:46:45+00:00",
+ "generated_at": "2026-11-26T11:47:21+00:00",
  "books": [
+  {
+   "id": "a-e-w-mason-at-the-villa-rose",
+   "version": 1,
+   "tag": "a-e-w-mason-at-the-villa-rose-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-e-w-mason-at-the-villa-rose-v1",
+   "date": "2026-11-26T11:47:20Z",
+   "title": "У віллі «Роза»",
+   "author": "А. Е. В. Мейсон",
+   "original": "A. E. W. Mason. At the Villa Rose",
+   "models": "MamayLM 27B, Книгозавр (службовий текст) (2 абз.)",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Детектив"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-e-w-mason/at-the-villa-rose",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-at-the-villa-rose-v1/a-e-w-mason-at-the-villa-rose.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-e-w-mason-at-the-villa-rose.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-at-the-villa-rose-v1/a-e-w-mason-at-the-villa-rose.uk.epub",
+     "size": 536462
+    },
+    {
+     "ext": "md",
+     "name": "a-e-w-mason-at-the-villa-rose.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-at-the-villa-rose-v1/a-e-w-mason-at-the-villa-rose.uk.md",
+     "size": 676304
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "a-e-w-mason-the-four-feathers",
    "version": 1,
