@@ -121,6 +121,7 @@ mark { background: var(--accent-soft); color: inherit; border-radius: 3px; paddi
 .meta { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 0; }
 .tag.ok { background: var(--accent); color: var(--accent-text); }
+.tag.part { background: transparent; border: 1px solid var(--accent); color: var(--accent); }
 .cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
 .chip {
   font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 999px; cursor: pointer;
@@ -312,6 +313,8 @@ function group(releases) {
       original: meta.original || "",
       models: meta.models || "",
       reviewed: Number(meta.reviewed) || 0, // approved human edits; 0 (or an older release): machine only
+      complete: meta.complete === true,
+      reviewers: Array.isArray(meta.reviewers) ? meta.reviewers.map(String) : [],
       categories: Array.isArray(meta.categories) ? meta.categories.map(String) : [],
       source: /^https:\/\//.test(meta.source || "") ? meta.source : "", // the original's page
       date: new Date(r.published_at || r.created_at),
@@ -330,6 +333,18 @@ function group(releases) {
       versions: versions.sort((a, b) => b.version - a.version),
     }))
     .sort((a, b) => b.versions[0].date - a.versions[0].date);
+}
+
+// Three states: machine only (no tag), some human edits, read through by people (a validator says so).
+function reviewTag(v) {
+  if (v.complete) {
+    return el("span", { class: "tag ok", title: "Люди прочитали весь переклад і виправили помилки" }, "✓ вичитано повністю");
+  }
+  if (!v.reviewed) return null;
+  const n = v.reviewed, d = n % 10, h = n % 100;
+  const word = d === 1 && h !== 11 ? "правка" : d >= 2 && d <= 4 && (h < 12 || h > 14) ? "правки" : "правок";
+  return el("span", { class: "tag part", title: "Люди виправили окремі місця, але весь текст ще не вичитано" },
+    `частково вичитано · ${n} ${word}`);
 }
 
 // Case, apostrophes (ʼ ’ ' `), ё/е and spaces do not matter.
@@ -387,8 +402,9 @@ function bookCard(b, q) {
     last.source && el("p", { class: "meta" }, "Оригінал: ",
       el("a", { href: last.source, target: "_blank", rel: "noopener" }, sourceName(last.source)), " ↗"),
     last.models && el("p", { class: "meta" }, `Машинний переклад: ${last.models}`),
-    (last.reviewed || last.categories.length) ? el("p", { class: "tags" },
-      last.reviewed ? el("span", { class: "tag ok", title: `Схвалених правок: ${last.reviewed}` }, "✓ вичитано людьми") : null,
+    last.reviewers.length ? el("p", { class: "meta" }, `Вичитали: ${last.reviewers.join(", ")}`) : null,
+    (reviewTag(last) || last.categories.length) ? el("p", { class: "tags" },
+      reviewTag(last),
       ...last.categories.map((c) => el("span", { class: "tag" }, c))) : null,
     last.notes && el("p", { class: "notes" }, last.notes));
   const card = el("article", { class: cover ? "book" : "book no-cover", id: b.id },
@@ -410,6 +426,7 @@ function fromCatalog(catalog) {
       version: b.version, tag: b.tag, url: b.url, date: new Date(b.date),
       title: b.title || b.id, author: b.author || "", original: b.original || "", models: b.models || "",
       reviewed: Number(b.reviewed) || 0, categories: (b.categories || []).map(String),
+      complete: b.complete === true, reviewers: (b.reviewers || []).map(String),
       source: /^https:\/\//.test(b.source || "") ? b.source : "", notes: b.notes || "",
       cover: b.cover ? { url: b.cover } : undefined,
       assets: b.files || [],
