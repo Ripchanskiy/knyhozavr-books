@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T09:54:34+00:00",
+ "generated_at": "2026-11-26T10:32:01+00:00",
  "books": [
   {
    "id": "a-e-w-mason-the-house-of-the-arrow",
@@ -57,13 +57,13 @@
      "ext": "epub",
      "name": "a-a-milne-the-red-house-mystery.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-a-milne-the-red-house-mystery-v1/a-a-milne-the-red-house-mystery.uk.epub",
-     "size": 673186
+     "size": 673207
     },
     {
      "ext": "md",
      "name": "a-a-milne-the-red-house-mystery.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-a-milne-the-red-house-mystery-v1/a-a-milne-the-red-house-mystery.uk.md",
-     "size": 566634
+     "size": 566626
     }
    ],
    "versions": 1
