@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T15:31:39+00:00",
+ "generated_at": "2026-11-26T16:34:18+00:00",
  "books": [
+  {
+   "id": "aeschylus-agamemnon-gilbert-murray",
+   "version": 1,
+   "tag": "aeschylus-agamemnon-gilbert-murray-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/aeschylus-agamemnon-gilbert-murray-v1",
+   "date": "2026-11-26T16:34:17Z",
+   "title": "Агамемнон",
+   "author": "Есхіл",
+   "original": "Aeschylus. Agamemnon",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Драма"
+   ],
+   "source": "https://standardebooks.org/ebooks/aeschylus/agamemnon/gilbert-murray",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-agamemnon-gilbert-murray-v1/aeschylus-agamemnon-gilbert-murray.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "aeschylus-agamemnon-gilbert-murray.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-agamemnon-gilbert-murray-v1/aeschylus-agamemnon-gilbert-murray.uk.epub",
+     "size": 503035
+    },
+    {
+     "ext": "md",
+     "name": "aeschylus-agamemnon-gilbert-murray.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-agamemnon-gilbert-murray-v1/aeschylus-agamemnon-gilbert-murray.uk.md",
+     "size": 213214
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "adam-smith-the-theory-of-moral-sentiments",
    "version": 1,
