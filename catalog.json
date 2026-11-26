@@ -1,7 +1,43 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T11:34:59+00:00",
+ "generated_at": "2026-11-26T11:46:45+00:00",
  "books": [
+  {
+   "id": "a-e-w-mason-the-four-feathers",
+   "version": 1,
+   "tag": "a-e-w-mason-the-four-feathers-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-e-w-mason-the-four-feathers-v1",
+   "date": "2026-11-26T11:46:44Z",
+   "title": "Чотири пера",
+   "author": "А. Е. В. Мейсон",
+   "original": "A. E. W. Mason. The Four Feathers",
+   "models": "MamayLM 27B, Книгозавр (службовий текст) (2 абз.)",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Пригоди",
+    "Любовний роман"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-e-w-mason/the-four-feathers",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-four-feathers-v1/a-e-w-mason-the-four-feathers.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-e-w-mason-the-four-feathers.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-four-feathers-v1/a-e-w-mason-the-four-feathers.uk.epub",
+     "size": 773121
+    },
+    {
+     "ext": "md",
+     "name": "a-e-w-mason-the-four-feathers.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-four-feathers-v1/a-e-w-mason-the-four-feathers.uk.md",
+     "size": 977228
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "a-p-herbert-the-house-by-the-river",
    "version": 1,
