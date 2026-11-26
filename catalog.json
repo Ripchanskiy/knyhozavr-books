@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T17:48:45+00:00",
+ "generated_at": "2026-11-26T18:26:07+00:00",
  "books": [
+  {
+   "id": "anna-julia-cooper-a-voice-from-the-south",
+   "version": 1,
+   "tag": "anna-julia-cooper-a-voice-from-the-south-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anna-julia-cooper-a-voice-from-the-south-v1",
+   "date": "2026-11-26T18:26:06Z",
+   "title": "Голос із Півдня",
+   "author": "Анна Джулія Купер",
+   "original": "Anna Julia Cooper. A Voice from the South",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Нон-фікшн"
+   ],
+   "source": "https://standardebooks.org/ebooks/anna-julia-cooper/a-voice-from-the-south",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anna-julia-cooper-a-voice-from-the-south-v1/anna-julia-cooper-a-voice-from-the-south.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anna-julia-cooper-a-voice-from-the-south.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anna-julia-cooper-a-voice-from-the-south-v1/anna-julia-cooper-a-voice-from-the-south.uk.epub",
+     "size": 589704
+    },
+    {
+     "ext": "md",
+     "name": "anna-julia-cooper-a-voice-from-the-south.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anna-julia-cooper-a-voice-from-the-south-v1/anna-julia-cooper-a-voice-from-the-south.uk.md",
+     "size": 620643
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "aesop-fables-v-s-vernon-jones",
    "version": 1,
