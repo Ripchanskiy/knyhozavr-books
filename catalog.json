@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T16:52:51+00:00",
+ "generated_at": "2026-11-26T17:42:26+00:00",
  "books": [
+  {
+   "id": "aeschylus-the-libation-bearers-gilbert-murray",
+   "version": 1,
+   "tag": "aeschylus-the-libation-bearers-gilbert-murray-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/aeschylus-the-libation-bearers-gilbert-murray-v1",
+   "date": "2026-11-26T17:42:25Z",
+   "title": "Жертвоприношення",
+   "author": "Есхіл",
+   "original": "Aeschylus. The Libation Bearers",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Драма"
+   ],
+   "source": "https://standardebooks.org/ebooks/aeschylus/the-libation-bearers/gilbert-murray",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-libation-bearers-gilbert-murray-v1/aeschylus-the-libation-bearers-gilbert-murray.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "aeschylus-the-libation-bearers-gilbert-murray.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-libation-bearers-gilbert-murray-v1/aeschylus-the-libation-bearers-gilbert-murray.uk.epub",
+     "size": 441737
+    },
+    {
+     "ext": "md",
+     "name": "aeschylus-the-libation-bearers-gilbert-murray.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-libation-bearers-gilbert-murray-v1/aeschylus-the-libation-bearers-gilbert-murray.uk.md",
+     "size": 151852
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "aeschylus-the-eumenides-gilbert-murray",
    "version": 1,
