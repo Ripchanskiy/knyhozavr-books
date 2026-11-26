@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T13:37:25+00:00",
+ "generated_at": "2026-11-26T13:38:46+00:00",
  "books": [
+  {
+   "id": "a-w-tozer-the-pursuit-of-god",
+   "version": 1,
+   "tag": "a-w-tozer-the-pursuit-of-god-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-w-tozer-the-pursuit-of-god-v1",
+   "date": "2026-11-26T13:38:45Z",
+   "title": "У пошуках Бога",
+   "author": "Е. В. Тозер",
+   "original": "A. W. Tozer. The Pursuit of God",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Релігія"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-w-tozer/the-pursuit-of-god",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-w-tozer-the-pursuit-of-god-v1/a-w-tozer-the-pursuit-of-god.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-w-tozer-the-pursuit-of-god.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-w-tozer-the-pursuit-of-god-v1/a-w-tozer-the-pursuit-of-god.uk.epub",
+     "size": 706558
+    },
+    {
+     "ext": "md",
+     "name": "a-w-tozer-the-pursuit-of-god.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-w-tozer-the-pursuit-of-god-v1/a-w-tozer-the-pursuit-of-god.uk.md",
+     "size": 278875
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "a-merritt-the-moon-pool",
    "version": 1,
