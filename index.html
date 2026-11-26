@@ -127,6 +127,11 @@ mark { background: var(--accent-soft); color: inherit; border-radius: 3px; paddi
   border: 1px solid var(--line); background: var(--panel); color: var(--text);
 }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.more {
+  display: block; margin: 28px auto 0; min-height: 44px; padding: 10px 24px; font: inherit; font-weight: 600;
+  border-radius: 10px; border: 1px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer;
+}
+.more:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .chip:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .notes {
   margin: 12px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px;
@@ -212,6 +217,7 @@ footer { padding: 16px 0 48px; color: var(--muted); font-size: 14px; text-align:
     <div class="cats" id="cats" role="group" aria-label="Категорії" hidden></div>
     <p class="found" id="found" aria-live="polite"></p>
     <div id="books"><div class="state">Завантаження…</div></div>
+    <button type="button" class="more" id="more" hidden></button>
 
     <section class="about">
       <p>
@@ -249,7 +255,6 @@ const CACHE_KEY = "knyhozavr.releases";
 const CACHE_MS = 10 * 60 * 1000; // anonymous API calls are limited to 60 per hour per visitor
 
 const dateFmt = new Intl.DateTimeFormat("uk-UA", { day: "numeric", month: "long", year: "numeric" });
-const numFmt = new Intl.NumberFormat("uk-UA");
 
 function el(tag, attrs = {}, ...children) {
   const e = document.createElement(tag);
@@ -280,13 +285,6 @@ function splitMeta(body) {
 
 const isCover = (name) => /\.cover\.(jpe?g|png|webp)$/i.test(name);
 
-function plural(n, one, few, many) {
-  const m10 = n % 10, m100 = n % 100;
-  if (m10 === 1 && m100 !== 11) return one;
-  if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
-  return many;
-}
-
 /** GitHub releases -> books, each with its versions newest first; books with the newest release first. */
 function group(releases) {
   const books = new Map();
@@ -296,7 +294,7 @@ function group(releases) {
     if (!m) continue;
     const [notes, meta] = splitMeta(r.body);
     const all = (r.assets || []).map((a) => ({
-      name: a.name, url: a.browser_download_url, size: a.size, downloads: a.download_count,
+      name: a.name, url: a.browser_download_url, size: a.size,
       ext: a.name.split(".").pop().toLowerCase(),
     }));
     const v = {
@@ -320,7 +318,10 @@ function group(releases) {
     books.get(m[1]).push(v);
   }
   return [...books.entries()]
-    .map(([id, versions]) => ({ id, versions: versions.sort((a, b) => b.version - a.version) }))
+    .map(([id, versions]) => ({
+      id,
+      versions: versions.sort((a, b) => b.version - a.version),
+    }))
     .sort((a, b) => b.versions[0].date - a.versions[0].date);
 }
 
@@ -368,7 +369,6 @@ function fileButtons(v, primary) {
 
 function bookCard(b, q) {
   const [last] = b.versions; // readers get the newest version; older ones stay in GitHub Releases
-  const downloads = b.versions.reduce((n, v) => n + v.assets.reduce((m, a) => m + a.downloads, 0), 0);
   const cover = b.versions.find((v) => v.cover)?.cover;
   const body = el("div", {},
     el("div", { class: "book-head" }, el("h3", {}, highlight(last.title, q))),
@@ -376,7 +376,7 @@ function bookCard(b, q) {
     last.original && last.original !== `${last.author}. ${last.title}` &&
       el("p", { class: "original", lang: "en" }, highlight(last.original, q)),
     el("p", { class: "meta" },
-      `${dateFmt.format(last.date)} · ${numFmt.format(downloads)} ${plural(downloads, "завантаження", "завантаження", "завантажень")}`),
+      dateFmt.format(last.date)),
     last.source && el("p", { class: "meta" }, "Оригінал: ",
       el("a", { href: last.source, target: "_blank", rel: "noopener" }, sourceName(last.source)), " ↗"),
     last.models && el("p", { class: "meta" }, `Машинний переклад: ${last.models}`),
@@ -395,8 +395,23 @@ function bookCard(b, q) {
 
 let allBooks = [];
 
-function render(releases) {
-  allBooks = group(releases);
+// catalog.json (written by the app with every release): the same shape group() makes from the API
+function fromCatalog(catalog) {
+  return catalog.books.map((b) => ({
+    id: b.id,
+    versions: [{
+      version: b.version, tag: b.tag, url: b.url, date: new Date(b.date),
+      title: b.title || b.id, author: b.author || "", original: b.original || "", models: b.models || "",
+      reviewed: Number(b.reviewed) || 0, categories: (b.categories || []).map(String),
+      source: /^https:\/\//.test(b.source || "") ? b.source : "", notes: b.notes || "",
+      cover: b.cover ? { url: b.cover } : undefined,
+      assets: b.files || [],
+    }],
+  }));
+}
+
+function render(books) {
+  allBooks = books;
   renderCategories();
   document.getElementById("search-box").hidden = allBooks.length < 2; // nothing to search among 0–1 books
   show();
@@ -413,10 +428,24 @@ function show() {
   const books = allBooks.filter((b) => (!q || searchText(b).includes(q))
     && (!category || b.versions[0].categories.includes(category)));
   found.textContent = q || category ? `Знайдено: ${books.length}` : "";
+  const key = `${q}|${category}`;
+  if (key !== shownFor) { shownFor = key; shown = PAGE; } // a new search starts from the first page
   root.replaceChildren(...(books.length
-    ? books.map((b) => bookCard(b, q))
+    ? books.slice(0, shown).map((b) => bookCard(b, q))
     : [el("div", { class: "state" }, "Нічого не знайдено. Спробуйте інше слово або прізвище автора.")]));
+  const more = document.getElementById("more");
+  const rest = books.length - shown;
+  more.hidden = rest <= 0;
+  more.textContent = `Показати ще ${Math.min(rest, PAGE)} з ${rest}`;
 }
+
+const PAGE = 48; // cards at a time: hundreds of covers at once are slow on a phone
+let shown = PAGE, shownFor = "";
+
+document.getElementById("more").addEventListener("click", () => {
+  shown += PAGE;
+  show();
+});
 
 document.getElementById("q").addEventListener("input", show);
 
@@ -453,8 +482,21 @@ function showError(message) {
 
 async function load() {
   try {
+    // next to this page on GitHub Pages; no-cache: a new release shows up without waiting for the browser cache
+    const res = await fetch("catalog.json", { cache: "no-cache" });
+    if (res.ok) {
+      const catalog = await res.json();
+      if (catalog.format === 1 && Array.isArray(catalog.books)) return render(fromCatalog(catalog));
+    }
+  } catch { /* no catalog yet (or a broken one): ask the GitHub API like before */ }
+  return loadFromApi();
+}
+
+// Fallback: the first 100 releases from the API (60 requests/hour per visitor without a token).
+async function loadFromApi() {
+  try {
     const cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || "null");
-    if (cached && Date.now() - cached.at < CACHE_MS) return render(cached.data);
+    if (cached && Date.now() - cached.at < CACHE_MS) return render(group(cached.data));
   } catch { /* storage blocked or broken: just ask GitHub */ }
   try {
     const res = await fetch(API, { headers: { Accept: "application/vnd.github+json" } });
@@ -464,7 +506,7 @@ async function load() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
     try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), data })); } catch { /* ignore */ }
-    render(data);
+    render(group(data));
   } catch (e) {
     showError("Не вдалося завантажити список книжок.");
   }
