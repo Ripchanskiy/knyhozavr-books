@@ -1,7 +1,43 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T18:26:07+00:00",
+ "generated_at": "2026-11-26T18:54:05+00:00",
  "books": [
+  {
+   "id": "anonymous-the-pearl-sophie-jewett",
+   "version": 1,
+   "tag": "anonymous-the-pearl-sophie-jewett-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anonymous-the-pearl-sophie-jewett-v1",
+   "date": "2026-11-26T18:54:04Z",
+   "title": "Перлина",
+   "author": "Анонімус",
+   "original": "Anonymous. The Pearl",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Поезія",
+    "Релігія"
+   ],
+   "source": "https://standardebooks.org/ebooks/anonymous/the-pearl/sophie-jewett",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-pearl-sophie-jewett-v1/anonymous-the-pearl-sophie-jewett.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anonymous-the-pearl-sophie-jewett.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-pearl-sophie-jewett-v1/anonymous-the-pearl-sophie-jewett.uk.epub",
+     "size": 593892
+    },
+    {
+     "ext": "md",
+     "name": "anonymous-the-pearl-sophie-jewett.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-pearl-sophie-jewett-v1/anonymous-the-pearl-sophie-jewett.uk.md",
+     "size": 110125
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "anna-julia-cooper-a-voice-from-the-south",
    "version": 1,
