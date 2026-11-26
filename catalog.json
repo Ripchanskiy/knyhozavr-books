@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T13:38:46+00:00",
+ "generated_at": "2026-11-26T13:39:18+00:00",
  "books": [
+  {
+   "id": "abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani",
+   "version": 1,
+   "tag": "abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani-v1",
+   "date": "2026-11-26T13:39:17Z",
+   "title": "Лузуміяти",
+   "author": "Абу-ль-Аля аль-Мааррі",
+   "original": "Abu al-ʻAlaʼ al-Maʻarri. The Luzumiyat",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Поезія"
+   ],
+   "source": "https://standardebooks.org/ebooks/abu-al-ala-al-maarri/the-luzumiyat/ameen-rihani",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani-v1/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani-v1/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.epub",
+     "size": 584562
+    },
+    {
+     "ext": "md",
+     "name": "abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani-v1/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.md",
+     "size": 110748
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "a-w-tozer-the-pursuit-of-god",
    "version": 1,
