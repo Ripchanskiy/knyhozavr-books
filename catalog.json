@@ -1,7 +1,40 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T17:42:26+00:00",
+ "generated_at": "2026-11-26T17:48:45+00:00",
  "books": [
+  {
+   "id": "aesop-fables-v-s-vernon-jones",
+   "version": 1,
+   "tag": "aesop-fables-v-s-vernon-jones-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/aesop-fables-v-s-vernon-jones-v1",
+   "date": "2026-11-26T17:48:43Z",
+   "title": "Байки",
+   "author": "Езоп",
+   "original": "Aesop. Fables",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [],
+   "source": "https://standardebooks.org/ebooks/aesop/fables/v-s-vernon-jones",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aesop-fables-v-s-vernon-jones-v1/aesop-fables-v-s-vernon-jones.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "aesop-fables-v-s-vernon-jones.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aesop-fables-v-s-vernon-jones-v1/aesop-fables-v-s-vernon-jones.uk.epub",
+     "size": 519531
+    },
+    {
+     "ext": "md",
+     "name": "aesop-fables-v-s-vernon-jones.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aesop-fables-v-s-vernon-jones-v1/aesop-fables-v-s-vernon-jones.uk.md",
+     "size": 338872
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "aeschylus-the-libation-bearers-gilbert-murray",
    "version": 1,
