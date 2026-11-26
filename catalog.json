@@ -1,7 +1,43 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T19:54:11+00:00",
+ "generated_at": "2026-11-26T20:26:14+00:00",
  "books": [
+  {
+   "id": "anonymous-barlaam-and-ioasaph-george-ratcliffe-w",
+   "version": 1,
+   "tag": "anonymous-barlaam-and-ioasaph-george-ratcliffe-w-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anonymous-barlaam-and-ioasaph-george-ratcliffe-w-v1",
+   "date": "2026-11-26T20:26:11Z",
+   "title": "Варлаам та Іоасаф",
+   "author": "Анонімний",
+   "original": "Anonymous. Barlaam and Ioasaph",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Любовний роман",
+    "Релігія"
+   ],
+   "source": "https://standardebooks.org/ebooks/anonymous/barlaam-and-ioasaph/george-ratcliffe-woodward_harold-mattingly",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-barlaam-and-ioasaph-george-ratcliffe-w-v1/anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-barlaam-and-ioasaph-george-ratcliffe-w-v1/anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.epub",
+     "size": 767353
+    },
+    {
+     "ext": "md",
+     "name": "anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-barlaam-and-ioasaph-george-ratcliffe-w-v1/anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.md",
+     "size": 757463
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "anonymous-beowulf-john-lesslie-hall",
    "version": 1,
