@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T13:14:37+00:00",
+ "generated_at": "2026-11-26T13:36:58+00:00",
  "books": [
+  {
+   "id": "ada-elizabeth-chesterton-in-darkest-london",
+   "version": 1,
+   "tag": "ada-elizabeth-chesterton-in-darkest-london-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/ada-elizabeth-chesterton-in-darkest-london-v1",
+   "date": "2026-11-26T13:36:56Z",
+   "title": "У найтемнішому Лондоні",
+   "author": "Ада Елізабет Честертон",
+   "original": "Ada Elizabeth Chesterton. In Darkest London",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Нон-фікшн"
+   ],
+   "source": "https://standardebooks.org/ebooks/ada-elizabeth-chesterton/in-darkest-london",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/ada-elizabeth-chesterton-in-darkest-london-v1/ada-elizabeth-chesterton-in-darkest-london.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "ada-elizabeth-chesterton-in-darkest-london.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/ada-elizabeth-chesterton-in-darkest-london-v1/ada-elizabeth-chesterton-in-darkest-london.uk.epub",
+     "size": 588381
+    },
+    {
+     "ext": "md",
+     "name": "ada-elizabeth-chesterton-in-darkest-london.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/ada-elizabeth-chesterton-in-darkest-london-v1/ada-elizabeth-chesterton-in-darkest-london.uk.md",
+     "size": 535764
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "a-e-w-mason-at-the-villa-rose",
    "version": 1,
