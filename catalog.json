@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T19:02:56+00:00",
+ "generated_at": "2026-11-26T19:52:53+00:00",
  "books": [
+  {
+   "id": "anonymous-sir-gawain-and-the-green-knight-s-o-an",
+   "version": 1,
+   "tag": "anonymous-sir-gawain-and-the-green-knight-s-o-an-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anonymous-sir-gawain-and-the-green-knight-s-o-an-v1",
+   "date": "2026-11-26T19:52:51Z",
+   "title": "Сер Ґавейн і Зелений Лицар",
+   "author": "Анонім",
+   "original": "Anonymous. Sir Gawain and the Green Knight",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Любовний роман"
+   ],
+   "source": "https://standardebooks.org/ebooks/anonymous/sir-gawain-and-the-green-knight/s-o-andrew",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-sir-gawain-and-the-green-knight-s-o-an-v1/anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-sir-gawain-and-the-green-knight-s-o-an-v1/anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.epub",
+     "size": 650258
+    },
+    {
+     "ext": "md",
+     "name": "anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-sir-gawain-and-the-green-knight-s-o-an-v1/anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.md",
+     "size": 369479
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "anonymous-the-life-of-lazarillo-de-tormes-clemen",
    "version": 1,
