@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T16:34:18+00:00",
+ "generated_at": "2026-11-26T16:52:51+00:00",
  "books": [
+  {
+   "id": "aeschylus-the-eumenides-gilbert-murray",
+   "version": 1,
+   "tag": "aeschylus-the-eumenides-gilbert-murray-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/aeschylus-the-eumenides-gilbert-murray-v1",
+   "date": "2026-11-26T16:52:49Z",
+   "title": "Євменіди",
+   "author": "Есхіл",
+   "original": "Aeschylus. The Eumenides",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Драма"
+   ],
+   "source": "https://standardebooks.org/ebooks/aeschylus/the-eumenides/gilbert-murray",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-eumenides-gilbert-murray-v1/aeschylus-the-eumenides-gilbert-murray.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "aeschylus-the-eumenides-gilbert-murray.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-eumenides-gilbert-murray-v1/aeschylus-the-eumenides-gilbert-murray.uk.epub",
+     "size": 478885
+    },
+    {
+     "ext": "md",
+     "name": "aeschylus-the-eumenides-gilbert-murray.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-eumenides-gilbert-murray-v1/aeschylus-the-eumenides-gilbert-murray.uk.md",
+     "size": 152794
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "aeschylus-agamemnon-gilbert-murray",
    "version": 1,
