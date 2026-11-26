@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T10:47:16+00:00",
+ "generated_at": "2026-11-26T10:47:33+00:00",
  "books": [
   {
    "id": "a-e-w-mason-the-house-of-the-arrow",
@@ -90,13 +90,13 @@
      "ext": "epub",
      "name": "felix-salten_bambi_whittaker-chambers.uk27b.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/bambi27b-v1/felix-salten_bambi_whittaker-chambers.uk27b.epub",
-     "size": 761714
+     "size": 761682
     },
     {
      "ext": "md",
      "name": "felix-salten_bambi_whittaker-chambers.uk27b.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/bambi27b-v1/felix-salten_bambi_whittaker-chambers.uk27b.md",
-     "size": 388568
+     "size": 388529
     }
    ],
    "versions": 1
