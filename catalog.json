@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T19:52:53+00:00",
+ "generated_at": "2026-11-26T19:54:11+00:00",
  "books": [
+  {
+   "id": "anonymous-beowulf-john-lesslie-hall",
+   "version": 1,
+   "tag": "anonymous-beowulf-john-lesslie-hall-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anonymous-beowulf-john-lesslie-hall-v1",
+   "date": "2026-11-26T19:54:09Z",
+   "title": "Беовульф",
+   "author": "Анонімний",
+   "original": "Anonymous. Beowulf",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Поезія"
+   ],
+   "source": "https://standardebooks.org/ebooks/anonymous/beowulf/john-lesslie-hall",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-beowulf-john-lesslie-hall-v1/anonymous-beowulf-john-lesslie-hall.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anonymous-beowulf-john-lesslie-hall.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-beowulf-john-lesslie-hall-v1/anonymous-beowulf-john-lesslie-hall.uk.epub",
+     "size": 408756
+    },
+    {
+     "ext": "md",
+     "name": "anonymous-beowulf-john-lesslie-hall.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-beowulf-john-lesslie-hall-v1/anonymous-beowulf-john-lesslie-hall.uk.md",
+     "size": 267999
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "anonymous-sir-gawain-and-the-green-knight-s-o-an",
    "version": 1,
