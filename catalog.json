@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T18:54:05+00:00",
+ "generated_at": "2026-11-26T19:02:56+00:00",
  "books": [
+  {
+   "id": "anonymous-the-life-of-lazarillo-de-tormes-clemen",
+   "version": 1,
+   "tag": "anonymous-the-life-of-lazarillo-de-tormes-clemen-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anonymous-the-life-of-lazarillo-de-tormes-clemen-v1",
+   "date": "2026-11-26T19:02:55Z",
+   "title": "Життя Ласарільйо де Тормеса",
+   "author": "Анонімний",
+   "original": "Anonymous. The Life of Lazarillo de Tormes",
+   "models": "MamayLM 27B",
+   "reviewed": 1,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/anonymous/the-life-of-lazarillo-de-tormes/clements-markham",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-life-of-lazarillo-de-tormes-clemen-v1/anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-life-of-lazarillo-de-tormes-clemen-v1/anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.epub",
+     "size": 768359
+    },
+    {
+     "ext": "md",
+     "name": "anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-life-of-lazarillo-de-tormes-clemen-v1/anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.md",
+     "size": 206215
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "anonymous-the-pearl-sophie-jewett",
    "version": 1,
