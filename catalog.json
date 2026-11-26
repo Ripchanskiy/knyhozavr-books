@@ -1,0 +1,105 @@
+{
+ "format": 1,
+ "generated_at": "2026-11-26T09:54:34+00:00",
+ "books": [
+  {
+   "id": "a-e-w-mason-the-house-of-the-arrow",
+   "version": 1,
+   "tag": "a-e-w-mason-the-house-of-the-arrow-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-e-w-mason-the-house-of-the-arrow-v1",
+   "date": "2026-11-26T09:54:33Z",
+   "title": "Дім Стріли",
+   "author": "А. Е. В. Мейсон",
+   "original": "A. E. W. Mason. The House of the Arrow",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "categories": [
+    "Детектив"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-e-w-mason/the-house-of-the-arrow",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-house-of-the-arrow-v1/a-e-w-mason-the-house-of-the-arrow.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-e-w-mason-the-house-of-the-arrow.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-house-of-the-arrow-v1/a-e-w-mason-the-house-of-the-arrow.uk.epub",
+     "size": 779680
+    },
+    {
+     "ext": "md",
+     "name": "a-e-w-mason-the-house-of-the-arrow.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-house-of-the-arrow-v1/a-e-w-mason-the-house-of-the-arrow.uk.md",
+     "size": 886293
+    }
+   ],
+   "versions": 1
+  },
+  {
+   "id": "a-a-milne-the-red-house-mystery",
+   "version": 1,
+   "tag": "a-a-milne-the-red-house-mystery-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/a-a-milne-the-red-house-mystery-v1",
+   "date": "2026-11-26T08:59:21Z",
+   "title": "Таємниця Червоного будинку",
+   "author": "А. А. Мілн",
+   "original": "A. A. Milne. The Red House Mystery",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "categories": [
+    "Детектив"
+   ],
+   "source": "https://standardebooks.org/ebooks/a-a-milne/the-red-house-mystery",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-a-milne-the-red-house-mystery-v1/a-a-milne-the-red-house-mystery.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "a-a-milne-the-red-house-mystery.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-a-milne-the-red-house-mystery-v1/a-a-milne-the-red-house-mystery.uk.epub",
+     "size": 673186
+    },
+    {
+     "ext": "md",
+     "name": "a-a-milne-the-red-house-mystery.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-a-milne-the-red-house-mystery-v1/a-a-milne-the-red-house-mystery.uk.md",
+     "size": 566634
+    }
+   ],
+   "versions": 1
+  },
+  {
+   "id": "bambi27b",
+   "version": 1,
+   "tag": "bambi27b-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/bambi27b-v1",
+   "date": "2026-11-25T16:52:22Z",
+   "title": "Бембі",
+   "author": "Фелікс Зальтен",
+   "original": "Felix Salten. Bambi",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/felix-salten/bambi/whittaker-chambers",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/bambi27b-v1/felix-salten_bambi_whittaker-chambers.uk27b.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "felix-salten_bambi_whittaker-chambers.uk27b.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/bambi27b-v1/felix-salten_bambi_whittaker-chambers.uk27b.epub",
+     "size": 761732
+    },
+    {
+     "ext": "md",
+     "name": "felix-salten_bambi_whittaker-chambers.uk27b.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/bambi27b-v1/felix-salten_bambi_whittaker-chambers.uk27b.md",
+     "size": 388612
+    }
+   ],
+   "versions": 1
+  }
+ ]
+}
