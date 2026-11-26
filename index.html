@@ -127,11 +127,18 @@ mark { background: var(--accent-soft); color: inherit; border-radius: 3px; paddi
   border: 1px solid var(--line); background: var(--panel); color: var(--text);
 }
 .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
-.more {
-  display: block; margin: 28px auto 0; min-height: 44px; padding: 10px 24px; font: inherit; font-weight: 600;
-  border-radius: 10px; border: 1px solid var(--accent); background: transparent; color: var(--accent); cursor: pointer;
+[hidden] { display: none !important; } /* a class's display: … must not show what is hidden */
+.pager { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: 32px 0 0; }
+.pager a, .pager span {
+  min-width: 44px; min-height: 44px; padding: 0 12px; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 10px; font-weight: 600; text-decoration: none;
 }
-.more:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.pager a { border: 1px solid var(--line); background: var(--panel); color: var(--text); }
+.pager a:hover { border-color: var(--accent); color: var(--accent); }
+.pager a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.pager [aria-current="page"] { background: var(--accent); color: var(--accent-text); }
+.pager .gap { min-width: 24px; padding: 0; color: var(--muted); font-weight: 400; }
+.pager .off { color: var(--muted); opacity: .45; border: 1px solid var(--line); }
 .chip:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .notes {
   margin: 12px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px;
@@ -217,7 +224,7 @@ footer { padding: 16px 0 48px; color: var(--muted); font-size: 14px; text-align:
     <div class="cats" id="cats" role="group" aria-label="Категорії" hidden></div>
     <p class="found" id="found" aria-live="polite"></p>
     <div id="books"><div class="state">Завантаження…</div></div>
-    <button type="button" class="more" id="more" hidden></button>
+    <nav class="pager" id="pager" aria-label="Сторінки" hidden></nav>
 
     <section class="about">
       <p>
@@ -429,21 +436,80 @@ function show() {
     && (!category || b.versions[0].categories.includes(category)));
   found.textContent = q || category ? `Знайдено: ${books.length}` : "";
   const key = `${q}|${category}`;
-  if (key !== shownFor) { shownFor = key; shown = PAGE; } // a new search starts from the first page
+  if (shownFor !== null && key !== shownFor) setPage(1, false); // a new search starts from the first page
+  shownFor = key;
+  const pages = Math.max(1, Math.ceil(books.length / PAGE));
+  if (page > pages) setPage(pages, false);
   root.replaceChildren(...(books.length
-    ? books.slice(0, shown).map((b) => bookCard(b, q))
+    ? books.slice((page - 1) * PAGE, page * PAGE).map((b) => bookCard(b, q))
     : [el("div", { class: "state" }, "Нічого не знайдено. Спробуйте інше слово або прізвище автора.")]));
-  const more = document.getElementById("more");
-  const rest = books.length - shown;
-  more.hidden = rest <= 0;
-  more.textContent = `Показати ще ${Math.min(rest, PAGE)} з ${rest}`;
+  renderPager(pages);
 }
 
-const PAGE = 48; // cards at a time: hundreds of covers at once are slow on a phone
-let shown = PAGE, shownFor = "";
+const PAGE = 48; // books per page: hundreds of covers at once are slow on a phone
+let page = pageFromUrl(), shownFor = null;
 
-document.getElementById("more").addEventListener("click", () => {
-  shown += PAGE;
+function pageFromUrl() {
+  return Math.max(1, parseInt(new URLSearchParams(location.search).get("page") || "1", 10) || 1);
+}
+
+/** The page in the address: ?page=3 can be shared, Back goes to the previous page. */
+function setPage(n, push) {
+  page = n;
+  const u = new URL(location.href);
+  if (n > 1) u.searchParams.set("page", String(n)); else u.searchParams.delete("page");
+  history[push ? "pushState" : "replaceState"](null, "", u);
+}
+
+function goTo(n) {
+  setPage(n, true);
+  show();
+  document.getElementById("books").scrollIntoView({ block: "start" });
+}
+
+// 1 … 4 5 [6] 7 8 … 38: the first, the last and two on each side of the current one
+function pageNumbers(pages) {
+  const want = new Set([1, pages]);
+  for (let i = page - 2; i <= page + 2; i++) if (i >= 1 && i <= pages) want.add(i);
+  const out = [];
+  let prev = 0;
+  for (const n of [...want].sort((a, b) => a - b)) {
+    if (n - prev > 1) out.push(n - prev === 2 ? n - 1 : null); // a single missing number is shown, not "…"
+    out.push(n);
+    prev = n;
+  }
+  return out;
+}
+
+function renderPager(pages) {
+  const nav = document.getElementById("pager");
+  nav.hidden = pages < 2;
+  if (pages < 2) return nav.replaceChildren();
+  const link = (n, label, aria) => {
+    const a = el("a", { href: `?${pageQuery(n)}`, "aria-label": aria || `Сторінка ${n}` }, label);
+    a.addEventListener("click", (e) => { e.preventDefault(); goTo(n); });
+    return a;
+  };
+  nav.replaceChildren(
+    page > 1 ? link(page - 1, "‹", "Попередня сторінка") : el("span", { class: "off", "aria-hidden": "true" }, "‹"),
+    ...pageNumbers(pages).map((n) => n === null
+      ? el("span", { class: "gap", "aria-hidden": "true" }, "…")
+      : n === page ? el("span", { "aria-current": "page" }, String(n)) : link(n, String(n))),
+    page < pages ? link(page + 1, "›", "Наступна сторінка") : el("span", { class: "off", "aria-hidden": "true" }, "›"),
+  );
+}
+
+function pageQuery(n) {
+  const p = new URLSearchParams(location.search);
+  if (n > 1) p.set("page", String(n)); else p.delete("page");
+  return p.toString();
+}
+
+addEventListener("popstate", () => {
+  page = pageFromUrl();
+  category = new URLSearchParams(location.search).get("category") || "";
+  shownFor = `${norm(document.getElementById("q").value)}|${category}`; // Back must not reset the page
+  renderCategories();
   show();
 });
 
