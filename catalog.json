@@ -1,7 +1,43 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T19:44:07+00:00",
+ "generated_at": "2026-11-27T19:47:47+00:00",
  "books": [
+  {
+   "id": "arthur-conan-doyle-the-maracot-deep",
+   "version": 1,
+   "tag": "arthur-conan-doyle-the-maracot-deep-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/arthur-conan-doyle-the-maracot-deep-v1",
+   "date": "2026-11-27T19:47:45Z",
+   "title": "Безодня Маракота",
+   "author": "Артур Конан Дойл",
+   "original": "Arthur Conan Doyle. The Maracot Deep",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Пригоди",
+    "Наукова фантастика"
+   ],
+   "source": "https://standardebooks.org/ebooks/arthur-conan-doyle/the-maracot-deep",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-the-maracot-deep-v1/arthur-conan-doyle-the-maracot-deep.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "arthur-conan-doyle-the-maracot-deep.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-the-maracot-deep-v1/arthur-conan-doyle-the-maracot-deep.uk.epub",
+     "size": 558157
+    },
+    {
+     "ext": "md",
+     "name": "arthur-conan-doyle-the-maracot-deep.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-the-maracot-deep-v1/arthur-conan-doyle-the-maracot-deep.uk.md",
+     "size": 387327
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "arthur-conan-doyle-sir-nigel",
    "version": 1,
