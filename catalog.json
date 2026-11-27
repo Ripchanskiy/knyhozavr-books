@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T08:30:02+00:00",
+ "generated_at": "2026-11-27T11:27:32+00:00",
  "books": [
+  {
+   "id": "anne-bronte-the-tenant-of-wildfell-hall",
+   "version": 1,
+   "tag": "anne-bronte-the-tenant-of-wildfell-hall-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anne-bronte-the-tenant-of-wildfell-hall-v1",
+   "date": "2026-11-27T11:27:30Z",
+   "title": "Мешканка Вайлфел-Голу",
+   "author": "Анна Бронте",
+   "original": "Anne Brontë. The Tenant of Wildfell Hall",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/anne-bronte/the-tenant-of-wildfell-hall",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anne-bronte-the-tenant-of-wildfell-hall-v1/anne-bronte-the-tenant-of-wildfell-hall.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anne-bronte-the-tenant-of-wildfell-hall.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anne-bronte-the-tenant-of-wildfell-hall-v1/anne-bronte-the-tenant-of-wildfell-hall.uk.epub",
+     "size": 996499
+    },
+    {
+     "ext": "md",
+     "name": "anne-bronte-the-tenant-of-wildfell-hall.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anne-bronte-the-tenant-of-wildfell-hall-v1/anne-bronte-the-tenant-of-wildfell-hall.uk.md",
+     "size": 1589444
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "algernon-blackwood-john-silence-stories",
    "version": 1,
