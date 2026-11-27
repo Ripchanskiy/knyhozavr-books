@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:07:54+00:00",
+ "generated_at": "2026-11-27T13:08:10+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -306,13 +306,13 @@
      "ext": "epub",
      "name": "anonymous-beowulf-john-lesslie-hall.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-beowulf-john-lesslie-hall-v1/anonymous-beowulf-john-lesslie-hall.uk.epub",
-     "size": 408756
+     "size": 408769
     },
     {
      "ext": "md",
      "name": "anonymous-beowulf-john-lesslie-hall.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-beowulf-john-lesslie-hall-v1/anonymous-beowulf-john-lesslie-hall.uk.md",
-     "size": 267999
+     "size": 268015
     }
    ],
    "versions": 1
