@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:04:05+00:00",
+ "generated_at": "2026-11-27T13:04:25+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -480,13 +480,13 @@
      "ext": "epub",
      "name": "aesop-fables-v-s-vernon-jones.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aesop-fables-v-s-vernon-jones-v1/aesop-fables-v-s-vernon-jones.uk.epub",
-     "size": 519531
+     "size": 519545
     },
     {
      "ext": "md",
      "name": "aesop-fables-v-s-vernon-jones.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aesop-fables-v-s-vernon-jones-v1/aesop-fables-v-s-vernon-jones.uk.md",
-     "size": 338872
+     "size": 338888
     }
    ],
    "versions": 1
