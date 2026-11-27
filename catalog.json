@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:05:24+00:00",
+ "generated_at": "2026-11-27T13:05:46+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -97,13 +97,13 @@
      "ext": "epub",
      "name": "alfred-lord-tennyson-idylls-of-the-king.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alfred-lord-tennyson-idylls-of-the-king-v1/alfred-lord-tennyson-idylls-of-the-king.uk.epub",
-     "size": 911197
+     "size": 911211
     },
     {
      "ext": "md",
      "name": "alfred-lord-tennyson-idylls-of-the-king.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alfred-lord-tennyson-idylls-of-the-king-v1/alfred-lord-tennyson-idylls-of-the-king.uk.md",
-     "size": 825325
+     "size": 825341
     }
    ],
    "versions": 1
