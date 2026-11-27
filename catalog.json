@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T08:15:45+00:00",
+ "generated_at": "2026-11-27T08:30:02+00:00",
  "books": [
+  {
+   "id": "algernon-blackwood-john-silence-stories",
+   "version": 1,
+   "tag": "algernon-blackwood-john-silence-stories-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/algernon-blackwood-john-silence-stories-v1",
+   "date": "2026-11-27T08:29:58Z",
+   "title": "Оповіді про Джона Сайленса",
+   "author": "Алджернон Блеквуд",
+   "original": "Algernon Blackwood. John Silence Stories",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Жахи"
+   ],
+   "source": "https://standardebooks.org/ebooks/algernon-blackwood/john-silence-stories",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/algernon-blackwood-john-silence-stories-v1/algernon-blackwood-john-silence-stories.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "algernon-blackwood-john-silence-stories.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/algernon-blackwood-john-silence-stories-v1/algernon-blackwood-john-silence-stories.uk.epub",
+     "size": 900507
+    },
+    {
+     "ext": "md",
+     "name": "algernon-blackwood-john-silence-stories.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/algernon-blackwood-john-silence-stories-v1/algernon-blackwood-john-silence-stories.uk.md",
+     "size": 1097032
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "alfred-lord-tennyson-idylls-of-the-king",
    "version": 1,
