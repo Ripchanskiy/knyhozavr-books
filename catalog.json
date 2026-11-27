@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T12:55:46+00:00",
+ "generated_at": "2026-11-27T12:56:08+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -795,13 +795,13 @@
      "ext": "epub",
      "name": "a-e-w-mason-at-the-villa-rose.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-at-the-villa-rose-v1/a-e-w-mason-at-the-villa-rose.uk.epub",
-     "size": 536462
+     "size": 536475
     },
     {
      "ext": "md",
      "name": "a-e-w-mason-at-the-villa-rose.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-at-the-villa-rose-v1/a-e-w-mason-at-the-villa-rose.uk.md",
-     "size": 676304
+     "size": 676320
     }
    ],
    "versions": 1
