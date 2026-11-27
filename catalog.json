@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:00:39+00:00",
+ "generated_at": "2026-11-27T13:02:04+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -620,13 +620,13 @@
      "ext": "epub",
      "name": "adam-smith-the-theory-of-moral-sentiments.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-theory-of-moral-sentiments-v1/adam-smith-the-theory-of-moral-sentiments.uk.epub",
-     "size": 944561
+     "size": 944575
     },
     {
      "ext": "md",
      "name": "adam-smith-the-theory-of-moral-sentiments.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-theory-of-moral-sentiments-v1/adam-smith-the-theory-of-moral-sentiments.uk.md",
-     "size": 1574733
+     "size": 1574749
     }
    ],
    "versions": 1
