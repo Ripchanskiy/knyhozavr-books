@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T12:55:22+00:00",
+ "generated_at": "2026-11-27T12:55:46+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -971,13 +971,13 @@
      "ext": "epub",
      "name": "a-a-milne-the-red-house-mystery.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-a-milne-the-red-house-mystery-v1/a-a-milne-the-red-house-mystery.uk.epub",
-     "size": 673177
+     "size": 673190
     },
     {
      "ext": "md",
      "name": "a-a-milne-the-red-house-mystery.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-a-milne-the-red-house-mystery-v1/a-a-milne-the-red-house-mystery.uk.md",
-     "size": 566587
+     "size": 566603
     }
    ],
    "versions": 1
