@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T12:59:57+00:00",
+ "generated_at": "2026-11-27T13:00:12+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -655,13 +655,13 @@
      "ext": "epub",
      "name": "abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani-v1/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.epub",
-     "size": 584562
+     "size": 584575
     },
     {
      "ext": "md",
      "name": "abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani-v1/abu-al-ala-al-maarri-the-luzumiyat-ameen-rihani.uk.md",
-     "size": 110748
+     "size": 110764
     }
    ],
    "versions": 1
