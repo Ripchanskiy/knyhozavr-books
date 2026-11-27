@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:03:13+00:00",
+ "generated_at": "2026-11-27T13:03:33+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -585,13 +585,13 @@
      "ext": "epub",
      "name": "aeschylus-agamemnon-gilbert-murray.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-agamemnon-gilbert-murray-v1/aeschylus-agamemnon-gilbert-murray.uk.epub",
-     "size": 503035
+     "size": 503049
     },
     {
      "ext": "md",
      "name": "aeschylus-agamemnon-gilbert-murray.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-agamemnon-gilbert-murray-v1/aeschylus-agamemnon-gilbert-murray.uk.md",
-     "size": 213214
+     "size": 213230
     }
    ],
    "versions": 1
