@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T08:02:27+00:00",
+ "generated_at": "2026-11-27T08:03:20+00:00",
  "books": [
+  {
+   "id": "akutagawa-ryunosuke-short-fiction-various-transl",
+   "version": 1,
+   "tag": "akutagawa-ryunosuke-short-fiction-various-transl-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/akutagawa-ryunosuke-short-fiction-various-transl-v1",
+   "date": "2026-11-27T08:03:17Z",
+   "title": "Коротка проза",
+   "author": "Акутаґава Рюноске",
+   "original": "Akutagawa Ryūnosuke. Short Fiction",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Оповідання"
+   ],
+   "source": "https://standardebooks.org/ebooks/akutagawa-ryunosuke/short-fiction/various-translators",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/akutagawa-ryunosuke-short-fiction-various-transl-v1/akutagawa-ryunosuke-short-fiction-various-transl.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "akutagawa-ryunosuke-short-fiction-various-transl.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/akutagawa-ryunosuke-short-fiction-various-transl-v1/akutagawa-ryunosuke-short-fiction-various-transl.uk.epub",
+     "size": 545709
+    },
+    {
+     "ext": "md",
+     "name": "akutagawa-ryunosuke-short-fiction-various-transl.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/akutagawa-ryunosuke-short-fiction-various-transl-v1/akutagawa-ryunosuke-short-fiction-various-transl.uk.md",
+     "size": 371097
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "adam-smith-the-wealth-of-nations",
    "version": 1,
