@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:04:57+00:00",
+ "generated_at": "2026-11-27T13:05:24+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -132,13 +132,13 @@
      "ext": "epub",
      "name": "alexandre-dumas-the-wolf-leader-alfred-allinson.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alexandre-dumas-the-wolf-leader-alfred-allinson-v1/alexandre-dumas-the-wolf-leader-alfred-allinson.uk.epub",
-     "size": 726301
+     "size": 726314
     },
     {
      "ext": "md",
      "name": "alexandre-dumas-the-wolf-leader-alfred-allinson.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alexandre-dumas-the-wolf-leader-alfred-allinson-v1/alexandre-dumas-the-wolf-leader-alfred-allinson.uk.md",
-     "size": 781174
+     "size": 781190
     }
    ],
    "versions": 1
