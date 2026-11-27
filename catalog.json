@@ -1,7 +1,40 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T08:01:14+00:00",
+ "generated_at": "2026-11-27T08:02:27+00:00",
  "books": [
+  {
+   "id": "adam-smith-the-wealth-of-nations",
+   "version": 1,
+   "tag": "adam-smith-the-wealth-of-nations-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/adam-smith-the-wealth-of-nations-v1",
+   "date": "2026-11-27T08:02:24Z",
+   "title": "Багатство народів",
+   "author": "Адам Сміт",
+   "original": "Adam Smith. The Wealth of Nations",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [],
+   "source": "https://standardebooks.org/ebooks/adam-smith/the-wealth-of-nations",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-wealth-of-nations-v1/adam-smith-the-wealth-of-nations.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "adam-smith-the-wealth-of-nations.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-wealth-of-nations-v1/adam-smith-the-wealth-of-nations.uk.epub",
+     "size": 1534628
+    },
+    {
+     "ext": "md",
+     "name": "adam-smith-the-wealth-of-nations.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-wealth-of-nations-v1/adam-smith-the-wealth-of-nations.uk.md",
+     "size": 4182891
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "agatha-christie-giants-bread",
    "version": 1,
