@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:07:33+00:00",
+ "generated_at": "2026-11-27T13:07:54+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -341,13 +341,13 @@
      "ext": "epub",
      "name": "anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-sir-gawain-and-the-green-knight-s-o-an-v1/anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.epub",
-     "size": 650258
+     "size": 650270
     },
     {
      "ext": "md",
      "name": "anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-sir-gawain-and-the-green-knight-s-o-an-v1/anonymous-sir-gawain-and-the-green-knight-s-o-an.uk.md",
-     "size": 369479
+     "size": 369495
     }
    ],
    "versions": 1
