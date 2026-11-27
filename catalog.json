@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:07:12+00:00",
+ "generated_at": "2026-11-27T13:07:33+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -376,13 +376,13 @@
      "ext": "epub",
      "name": "anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-life-of-lazarillo-de-tormes-clemen-v1/anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.epub",
-     "size": 768359
+     "size": 768373
     },
     {
      "ext": "md",
      "name": "anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-life-of-lazarillo-de-tormes-clemen-v1/anonymous-the-life-of-lazarillo-de-tormes-clemen.uk.md",
-     "size": 206215
+     "size": 206231
     }
    ],
    "versions": 1
