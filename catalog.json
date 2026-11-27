@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:03:49+00:00",
+ "generated_at": "2026-11-27T13:04:05+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -515,13 +515,13 @@
      "ext": "epub",
      "name": "aeschylus-the-libation-bearers-gilbert-murray.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-libation-bearers-gilbert-murray-v1/aeschylus-the-libation-bearers-gilbert-murray.uk.epub",
-     "size": 441737
+     "size": 441750
     },
     {
      "ext": "md",
      "name": "aeschylus-the-libation-bearers-gilbert-murray.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-libation-bearers-gilbert-murray-v1/aeschylus-the-libation-bearers-gilbert-murray.uk.md",
-     "size": 151852
+     "size": 151868
     }
    ],
    "versions": 1
