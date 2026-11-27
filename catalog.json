@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-26T20:26:14+00:00",
+ "generated_at": "2026-11-27T08:01:14+00:00",
  "books": [
+  {
+   "id": "agatha-christie-giants-bread",
+   "version": 1,
+   "tag": "agatha-christie-giants-bread-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/agatha-christie-giants-bread-v1",
+   "date": "2026-11-27T08:01:13Z",
+   "title": "Хліб велетня",
+   "author": "Аґата Крісті",
+   "original": "Agatha Christie. Giant’s Bread",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/agatha-christie/giants-bread",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/agatha-christie-giants-bread-v1/agatha-christie-giants-bread.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "agatha-christie-giants-bread.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/agatha-christie-giants-bread-v1/agatha-christie-giants-bread.uk.epub",
+     "size": 763092
+    },
+    {
+     "ext": "md",
+     "name": "agatha-christie-giants-bread.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/agatha-christie-giants-bread-v1/agatha-christie-giants-bread.uk.md",
+     "size": 985867
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "anonymous-barlaam-and-ioasaph-george-ratcliffe-w",
    "version": 1,
