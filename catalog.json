@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:06:54+00:00",
+ "generated_at": "2026-11-27T13:07:12+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -412,13 +412,13 @@
      "ext": "epub",
      "name": "anonymous-the-pearl-sophie-jewett.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-pearl-sophie-jewett-v1/anonymous-the-pearl-sophie-jewett.uk.epub",
-     "size": 593892
+     "size": 593908
     },
     {
      "ext": "md",
      "name": "anonymous-the-pearl-sophie-jewett.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-the-pearl-sophie-jewett-v1/anonymous-the-pearl-sophie-jewett.uk.md",
-     "size": 110125
+     "size": 110141
     }
    ],
    "versions": 1
