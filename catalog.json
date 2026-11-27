@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:06:10+00:00",
+ "generated_at": "2026-11-27T13:06:27+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -447,13 +447,13 @@
      "ext": "epub",
      "name": "anna-julia-cooper-a-voice-from-the-south.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anna-julia-cooper-a-voice-from-the-south-v1/anna-julia-cooper-a-voice-from-the-south.uk.epub",
-     "size": 589704
+     "size": 589718
     },
     {
      "ext": "md",
      "name": "anna-julia-cooper-a-voice-from-the-south.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anna-julia-cooper-a-voice-from-the-south-v1/anna-julia-cooper-a-voice-from-the-south.uk.md",
-     "size": 620643
+     "size": 620659
     }
    ],
    "versions": 1
