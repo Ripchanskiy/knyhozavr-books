@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:02:04+00:00",
+ "generated_at": "2026-11-27T13:02:30+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -235,13 +235,13 @@
      "ext": "epub",
      "name": "agatha-christie-giants-bread.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/agatha-christie-giants-bread-v1/agatha-christie-giants-bread.uk.epub",
-     "size": 763092
+     "size": 763105
     },
     {
      "ext": "md",
      "name": "agatha-christie-giants-bread.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/agatha-christie-giants-bread-v1/agatha-christie-giants-bread.uk.md",
-     "size": 985867
+     "size": 985883
     }
    ],
    "versions": 1
