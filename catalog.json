@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:00:12+00:00",
+ "generated_at": "2026-11-27T13:00:39+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -760,13 +760,13 @@
      "ext": "epub",
      "name": "ada-elizabeth-chesterton-in-darkest-london.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/ada-elizabeth-chesterton-in-darkest-london-v1/ada-elizabeth-chesterton-in-darkest-london.uk.epub",
-     "size": 588381
+     "size": 588393
     },
     {
      "ext": "md",
      "name": "ada-elizabeth-chesterton-in-darkest-london.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/ada-elizabeth-chesterton-in-darkest-london-v1/ada-elizabeth-chesterton-in-darkest-london.uk.md",
-     "size": 535764
+     "size": 535780
     }
    ],
    "versions": 1
