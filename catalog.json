@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T17:18:22+00:00",
+ "generated_at": "2026-11-27T19:44:07+00:00",
  "books": [
+  {
+   "id": "arthur-conan-doyle-sir-nigel",
+   "version": 1,
+   "tag": "arthur-conan-doyle-sir-nigel-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/arthur-conan-doyle-sir-nigel-v1",
+   "date": "2026-11-27T19:44:06Z",
+   "title": "Сер Найджел",
+   "author": "Артур Конан Дойл",
+   "original": "Arthur Conan Doyle. Sir Nigel",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Історичний роман"
+   ],
+   "source": "https://standardebooks.org/ebooks/arthur-conan-doyle/sir-nigel",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-sir-nigel-v1/arthur-conan-doyle-sir-nigel.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "arthur-conan-doyle-sir-nigel.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-sir-nigel-v1/arthur-conan-doyle-sir-nigel.uk.epub",
+     "size": 956471
+    },
+    {
+     "ext": "md",
+     "name": "arthur-conan-doyle-sir-nigel.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-sir-nigel-v1/arthur-conan-doyle-sir-nigel.uk.md",
+     "size": 1201149
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "arthur-conan-doyle-brigadier-gerard-stories",
    "version": 1,
