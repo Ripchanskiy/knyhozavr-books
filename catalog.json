@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T12:59:40+00:00",
+ "generated_at": "2026-11-27T12:59:57+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -690,13 +690,13 @@
      "ext": "epub",
      "name": "a-w-tozer-the-pursuit-of-god.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-w-tozer-the-pursuit-of-god-v1/a-w-tozer-the-pursuit-of-god.uk.epub",
-     "size": 706558
+     "size": 706572
     },
     {
      "ext": "md",
      "name": "a-w-tozer-the-pursuit-of-god.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-w-tozer-the-pursuit-of-god-v1/a-w-tozer-the-pursuit-of-god.uk.md",
-     "size": 278875
+     "size": 278891
     }
    ],
    "versions": 1
