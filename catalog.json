@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T12:58:25+00:00",
+ "generated_at": "2026-11-27T12:59:40+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -866,13 +866,13 @@
      "ext": "epub",
      "name": "a-p-herbert-the-house-by-the-river.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-p-herbert-the-house-by-the-river-v1/a-p-herbert-the-house-by-the-river.uk.epub",
-     "size": 751230
+     "size": 751244
     },
     {
      "ext": "md",
      "name": "a-p-herbert-the-house-by-the-river.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-p-herbert-the-house-by-the-river-v1/a-p-herbert-the-house-by-the-river.uk.md",
-     "size": 621666
+     "size": 621682
     }
    ],
    "versions": 1
