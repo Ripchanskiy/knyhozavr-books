@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T15:49:42+00:00",
+ "generated_at": "2026-11-27T17:18:22+00:00",
  "books": [
+  {
+   "id": "arthur-conan-doyle-brigadier-gerard-stories",
+   "version": 1,
+   "tag": "arthur-conan-doyle-brigadier-gerard-stories-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/arthur-conan-doyle-brigadier-gerard-stories-v1",
+   "date": "2026-11-27T17:18:19Z",
+   "title": "Оповідання про бригадира Жерара",
+   "author": "Артур Конан Дойл",
+   "original": "Arthur Conan Doyle. Brigadier Gerard Stories",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Пригоди"
+   ],
+   "source": "https://standardebooks.org/ebooks/arthur-conan-doyle/brigadier-gerard-stories",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-brigadier-gerard-stories-v1/arthur-conan-doyle-brigadier-gerard-stories.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "arthur-conan-doyle-brigadier-gerard-stories.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-brigadier-gerard-stories-v1/arthur-conan-doyle-brigadier-gerard-stories.uk.epub",
+     "size": 966658
+    },
+    {
+     "ext": "md",
+     "name": "arthur-conan-doyle-brigadier-gerard-stories.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-brigadier-gerard-stories-v1/arthur-conan-doyle-brigadier-gerard-stories.uk.md",
+     "size": 1269675
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "anonymous-gudrun-mary-pickering-nichols",
    "version": 1,
