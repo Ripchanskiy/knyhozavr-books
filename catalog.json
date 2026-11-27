@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:53:10+00:00",
+ "generated_at": "2026-11-27T15:49:42+00:00",
  "books": [
+  {
+   "id": "anonymous-gudrun-mary-pickering-nichols",
+   "version": 1,
+   "tag": "anonymous-gudrun-mary-pickering-nichols-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/anonymous-gudrun-mary-pickering-nichols-v1",
+   "date": "2026-11-27T15:49:40Z",
+   "title": "Ґудрун",
+   "author": "Анонімний",
+   "original": "Anonymous. Gudrun",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Поезія"
+   ],
+   "source": "https://standardebooks.org/ebooks/anonymous/gudrun/mary-pickering-nichols",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-gudrun-mary-pickering-nichols-v1/anonymous-gudrun-mary-pickering-nichols.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "anonymous-gudrun-mary-pickering-nichols.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-gudrun-mary-pickering-nichols-v1/anonymous-gudrun-mary-pickering-nichols.uk.epub",
+     "size": 646137
+    },
+    {
+     "ext": "md",
+     "name": "anonymous-gudrun-mary-pickering-nichols.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-gudrun-mary-pickering-nichols-v1/anonymous-gudrun-mary-pickering-nichols.uk.md",
+     "size": 774181
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "alexandre-dumas-the-black-tulip-p-f-collier-and",
    "version": 1,
