@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:08:10+00:00",
+ "generated_at": "2026-11-27T13:08:29+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -271,13 +271,13 @@
      "ext": "epub",
      "name": "anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-barlaam-and-ioasaph-george-ratcliffe-w-v1/anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.epub",
-     "size": 767353
+     "size": 767367
     },
     {
      "ext": "md",
      "name": "anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anonymous-barlaam-and-ioasaph-george-ratcliffe-w-v1/anonymous-barlaam-and-ioasaph-george-ratcliffe-w.uk.md",
-     "size": 757463
+     "size": 757479
     }
    ],
    "versions": 1
