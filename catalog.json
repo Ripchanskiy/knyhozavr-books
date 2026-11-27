@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:06:27+00:00",
+ "generated_at": "2026-11-27T13:06:54+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -26,13 +26,13 @@
      "ext": "epub",
      "name": "anne-bronte-the-tenant-of-wildfell-hall.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anne-bronte-the-tenant-of-wildfell-hall-v1/anne-bronte-the-tenant-of-wildfell-hall.uk.epub",
-     "size": 996499
+     "size": 996513
     },
     {
      "ext": "md",
      "name": "anne-bronte-the-tenant-of-wildfell-hall.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/anne-bronte-the-tenant-of-wildfell-hall-v1/anne-bronte-the-tenant-of-wildfell-hall.uk.md",
-     "size": 1589444
+     "size": 1589460
     }
    ],
    "versions": 1
