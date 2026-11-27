@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:02:30+00:00",
+ "generated_at": "2026-11-27T13:03:13+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -200,13 +200,13 @@
      "ext": "epub",
      "name": "adam-smith-the-wealth-of-nations.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-wealth-of-nations-v1/adam-smith-the-wealth-of-nations.uk.epub",
-     "size": 1534628
+     "size": 1534641
     },
     {
      "ext": "md",
      "name": "adam-smith-the-wealth-of-nations.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/adam-smith-the-wealth-of-nations-v1/adam-smith-the-wealth-of-nations.uk.md",
-     "size": 4182891
+     "size": 4182907
     }
    ],
    "versions": 1
