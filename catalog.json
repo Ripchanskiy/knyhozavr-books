@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:03:33+00:00",
+ "generated_at": "2026-11-27T13:03:49+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -550,13 +550,13 @@
      "ext": "epub",
      "name": "aeschylus-the-eumenides-gilbert-murray.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-eumenides-gilbert-murray-v1/aeschylus-the-eumenides-gilbert-murray.uk.epub",
-     "size": 478885
+     "size": 478899
     },
     {
      "ext": "md",
      "name": "aeschylus-the-eumenides-gilbert-murray.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/aeschylus-the-eumenides-gilbert-murray-v1/aeschylus-the-eumenides-gilbert-murray.uk.md",
-     "size": 152794
+     "size": 152810
     }
    ],
    "versions": 1
