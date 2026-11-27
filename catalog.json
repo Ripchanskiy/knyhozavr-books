@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:05:46+00:00",
+ "generated_at": "2026-11-27T13:06:10+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -61,13 +61,13 @@
      "ext": "epub",
      "name": "algernon-blackwood-john-silence-stories.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/algernon-blackwood-john-silence-stories-v1/algernon-blackwood-john-silence-stories.uk.epub",
-     "size": 900507
+     "size": 900520
     },
     {
      "ext": "md",
      "name": "algernon-blackwood-john-silence-stories.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/algernon-blackwood-john-silence-stories-v1/algernon-blackwood-john-silence-stories.uk.md",
-     "size": 1097032
+     "size": 1097048
     }
    ],
    "versions": 1
