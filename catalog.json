@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T12:58:02+00:00",
+ "generated_at": "2026-11-27T12:58:25+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -725,13 +725,13 @@
      "ext": "epub",
      "name": "a-merritt-the-moon-pool.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-merritt-the-moon-pool-v1/a-merritt-the-moon-pool.uk.epub",
-     "size": 644933
+     "size": 644947
     },
     {
      "ext": "md",
      "name": "a-merritt-the-moon-pool.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-merritt-the-moon-pool-v1/a-merritt-the-moon-pool.uk.md",
-     "size": 986161
+     "size": 986177
     }
    ],
    "versions": 1
