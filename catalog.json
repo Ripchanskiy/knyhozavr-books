@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T08:03:20+00:00",
+ "generated_at": "2026-11-27T08:14:44+00:00",
  "books": [
+  {
+   "id": "alexandre-dumas-the-wolf-leader-alfred-allinson",
+   "version": 1,
+   "tag": "alexandre-dumas-the-wolf-leader-alfred-allinson-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/alexandre-dumas-the-wolf-leader-alfred-allinson-v1",
+   "date": "2026-11-27T08:14:43Z",
+   "title": "Вожак вовків",
+   "author": "Александр Дюма",
+   "original": "Alexandre Dumas. The Wolf-Leader",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/alexandre-dumas/the-wolf-leader/alfred-allinson",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alexandre-dumas-the-wolf-leader-alfred-allinson-v1/alexandre-dumas-the-wolf-leader-alfred-allinson.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "alexandre-dumas-the-wolf-leader-alfred-allinson.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alexandre-dumas-the-wolf-leader-alfred-allinson-v1/alexandre-dumas-the-wolf-leader-alfred-allinson.uk.epub",
+     "size": 726301
+    },
+    {
+     "ext": "md",
+     "name": "alexandre-dumas-the-wolf-leader-alfred-allinson.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alexandre-dumas-the-wolf-leader-alfred-allinson-v1/alexandre-dumas-the-wolf-leader-alfred-allinson.uk.md",
+     "size": 781174
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "akutagawa-ryunosuke-short-fiction-various-transl",
    "version": 1,
