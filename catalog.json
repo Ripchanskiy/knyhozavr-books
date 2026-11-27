@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T13:04:25+00:00",
+ "generated_at": "2026-11-27T13:04:57+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -167,13 +167,13 @@
      "ext": "epub",
      "name": "akutagawa-ryunosuke-short-fiction-various-transl.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/akutagawa-ryunosuke-short-fiction-various-transl-v1/akutagawa-ryunosuke-short-fiction-various-transl.uk.epub",
-     "size": 545709
+     "size": 545722
     },
     {
      "ext": "md",
      "name": "akutagawa-ryunosuke-short-fiction-various-transl.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/akutagawa-ryunosuke-short-fiction-various-transl-v1/akutagawa-ryunosuke-short-fiction-various-transl.uk.md",
-     "size": 371097
+     "size": 371113
     }
    ],
    "versions": 1
