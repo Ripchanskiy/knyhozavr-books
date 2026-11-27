@@ -1,7 +1,43 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T08:14:44+00:00",
+ "generated_at": "2026-11-27T08:15:45+00:00",
  "books": [
+  {
+   "id": "alfred-lord-tennyson-idylls-of-the-king",
+   "version": 1,
+   "tag": "alfred-lord-tennyson-idylls-of-the-king-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/alfred-lord-tennyson-idylls-of-the-king-v1",
+   "date": "2026-11-27T08:15:43Z",
+   "title": "Ідилії Короля",
+   "author": "Альфред, лорд Теннісон",
+   "original": "Alfred, Lord Tennyson. Idylls of the King",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Любовний роман",
+    "Поезія"
+   ],
+   "source": "https://standardebooks.org/ebooks/alfred-lord-tennyson/idylls-of-the-king",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alfred-lord-tennyson-idylls-of-the-king-v1/alfred-lord-tennyson-idylls-of-the-king.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "alfred-lord-tennyson-idylls-of-the-king.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alfred-lord-tennyson-idylls-of-the-king-v1/alfred-lord-tennyson-idylls-of-the-king.uk.epub",
+     "size": 911197
+    },
+    {
+     "ext": "md",
+     "name": "alfred-lord-tennyson-idylls-of-the-king.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/alfred-lord-tennyson-idylls-of-the-king-v1/alfred-lord-tennyson-idylls-of-the-king.uk.md",
+     "size": 825325
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "alexandre-dumas-the-wolf-leader-alfred-allinson",
    "version": 1,
