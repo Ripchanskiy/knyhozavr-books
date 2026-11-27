@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T12:57:38+00:00",
+ "generated_at": "2026-11-27T12:58:02+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -901,13 +901,13 @@
      "ext": "epub",
      "name": "a-e-w-mason-the-prisoner-in-the-opal.uk.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-prisoner-in-the-opal-v1/a-e-w-mason-the-prisoner-in-the-opal.uk.epub",
-     "size": 1009769
+     "size": 1009782
     },
     {
      "ext": "md",
      "name": "a-e-w-mason-the-prisoner-in-the-opal.uk.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/a-e-w-mason-the-prisoner-in-the-opal-v1/a-e-w-mason-the-prisoner-in-the-opal.uk.md",
-     "size": 954183
+     "size": 954199
     }
    ],
    "versions": 1
