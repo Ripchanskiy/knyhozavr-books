@@ -82,7 +82,7 @@ h2 {
   text-transform: uppercase; color: var(--muted);
 }
 
-/* 4 books in a row on a wide screen, then 3, 2 (cover on top, text under it) */
+/* wide screen: as many columns as fit (cover on top, text under it); phone: one per row, see @media */
 /* as many book-sized columns as fit; the card is exactly as wide as its cover */
 #books { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 28px 24px; }
 #books > .state { grid-column: 1 / -1; }
@@ -181,15 +181,19 @@ footer { padding: 16px 0 48px; color: var(--muted); font-size: 14px; text-align:
 @media (max-width: 560px) {
   header { padding-top: 28px; }
   h1 { font-size: 28px; }
-  #books { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
-  .book > div, .book > .files { padding-left: 10px; padding-right: 10px; }
+  /* phone: one book per row, cover on the left, text beside it, buttons under both */
+  #books { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .book { display: grid; grid-template-columns: 112px minmax(0, 1fr); align-items: start; }
+  .book.no-cover { grid-template-columns: minmax(0, 1fr); }
+  .book > .cover { grid-column: 1; grid-row: 1; margin: 12px 0 0 12px; width: 100px; border-radius: 6px; }
+  .book > div:not(.files) { grid-column: -2; grid-row: 1; padding: 12px 12px 0 12px; }
+  .book > .files { grid-column: 1 / -1; grid-row: 2; flex-direction: row; padding: 12px; }
+  .book > .files .btn { flex: 1 1 0; min-width: 0; min-height: 44px; }
   .book h3 { font-size: 17px; }
   .author { font-size: 15px; }
-  .original, .meta { font-size: 12px; }
-  .notes { display: none; }
-  .book .btn { min-height: 40px; }
+  .original, .meta { font-size: 13px; }
+  .notes { -webkit-line-clamp: 3; font-size: 13px; }
 }
-@media (max-width: 340px) { #books { grid-template-columns: minmax(0, 1fr); } }
 </style>
 </head>
 <body>
