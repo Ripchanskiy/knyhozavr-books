@@ -1,6 +1,6 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T11:27:32+00:00",
+ "generated_at": "2026-11-27T12:55:22+00:00",
  "books": [
   {
    "id": "anne-bronte-the-tenant-of-wildfell-hall",
@@ -1006,13 +1006,13 @@
      "ext": "epub",
      "name": "felix-salten_bambi_whittaker-chambers.uk27b.epub",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/bambi27b-v1/felix-salten_bambi_whittaker-chambers.uk27b.epub",
-     "size": 761682
+     "size": 761696
     },
     {
      "ext": "md",
      "name": "felix-salten_bambi_whittaker-chambers.uk27b.md",
      "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/bambi27b-v1/felix-salten_bambi_whittaker-chambers.uk27b.md",
-     "size": 388529
+     "size": 388545
     }
    ],
    "versions": 1
