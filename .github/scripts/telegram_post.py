@@ -130,7 +130,7 @@ def post(rel: dict, bot: str, chat: str, site: str) -> None:
     cover = next((n for n in assets if re.search(r"\.cover\.(jpe?g|png|webp)$", n)), None)
 
     link = f"{site}?book={urllib.parse.quote(book)}"
-    buttons = json.dumps({"inline_keyboard": [[{"text": "📖 На сайті: MD, усі версії", "url": link}]]},
+    buttons = json.dumps({"inline_keyboard": [[{"text": "📖 На сайті", "url": link}]]},
                          ensure_ascii=False)
     text = caption(meta, notes, tag)
     cover_bytes = get(assets[cover]) if cover else None
