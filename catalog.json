@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-28T18:40:24+00:00",
+ "generated_at": "2026-11-28T19:32:40+00:00",
  "books": [
+  {
+   "id": "benito-perez-galdos-saragossa-minna-caroline-smi",
+   "version": 1,
+   "tag": "benito-perez-galdos-saragossa-minna-caroline-smi-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/benito-perez-galdos-saragossa-minna-caroline-smi-v1",
+   "date": "2026-11-28T19:32:37Z",
+   "title": "Сарагоса",
+   "author": "Беніто Перес Ґальдос",
+   "original": "Benito Pérez Galdós. Saragossa",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Історичний роман"
+   ],
+   "source": "https://standardebooks.org/ebooks/benito-perez-galdos/saragossa/minna-caroline-smith",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/benito-perez-galdos-saragossa-minna-caroline-smi-v1/benito-perez-galdos-saragossa-minna-caroline-smi.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "benito-perez-galdos-saragossa-minna-caroline-smi.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/benito-perez-galdos-saragossa-minna-caroline-smi-v1/benito-perez-galdos-saragossa-minna-caroline-smi.uk.epub",
+     "size": 765045
+    },
+    {
+     "ext": "md",
+     "name": "benito-perez-galdos-saragossa-minna-caroline-smi.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/benito-perez-galdos-saragossa-minna-caroline-smi-v1/benito-perez-galdos-saragossa-minna-caroline-smi.uk.md",
+     "size": 645367
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "arthur-machen-the-secret-glory",
    "version": 1,
