@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-27T19:47:47+00:00",
+ "generated_at": "2026-11-28T17:49:15+00:00",
  "books": [
+  {
+   "id": "arthur-conan-doyle-the-white-company",
+   "version": 1,
+   "tag": "arthur-conan-doyle-the-white-company-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/arthur-conan-doyle-the-white-company-v1",
+   "date": "2026-11-28T17:49:12Z",
+   "title": "Біла рота",
+   "author": "Артур Конан Дойл",
+   "original": "Arthur Conan Doyle. The White Company",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Історичний роман"
+   ],
+   "source": "https://standardebooks.org/ebooks/arthur-conan-doyle/the-white-company",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-the-white-company-v1/arthur-conan-doyle-the-white-company.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "arthur-conan-doyle-the-white-company.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-the-white-company-v1/arthur-conan-doyle-the-white-company.uk.epub",
+     "size": 881033
+    },
+    {
+     "ext": "md",
+     "name": "arthur-conan-doyle-the-white-company.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-conan-doyle-the-white-company-v1/arthur-conan-doyle-the-white-company.uk.md",
+     "size": 1372669
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "arthur-conan-doyle-the-maracot-deep",
    "version": 1,
