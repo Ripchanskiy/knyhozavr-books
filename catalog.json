@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-28T17:57:13+00:00",
+ "generated_at": "2026-11-28T18:40:24+00:00",
  "books": [
+  {
+   "id": "arthur-machen-the-secret-glory",
+   "version": 1,
+   "tag": "arthur-machen-the-secret-glory-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/arthur-machen-the-secret-glory-v1",
+   "date": "2026-11-28T18:40:22Z",
+   "title": "Таємна слава",
+   "author": "Артур Мекен",
+   "original": "Arthur Machen. The Secret Glory",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/arthur-machen/the-secret-glory",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-machen-the-secret-glory-v1/arthur-machen-the-secret-glory.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "arthur-machen-the-secret-glory.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-machen-the-secret-glory-v1/arthur-machen-the-secret-glory.uk.epub",
+     "size": 780647
+    },
+    {
+     "ext": "md",
+     "name": "arthur-machen-the-secret-glory.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-machen-the-secret-glory-v1/arthur-machen-the-secret-glory.uk.md",
+     "size": 614620
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "arthur-machen-the-hill-of-dreams",
    "version": 1,
