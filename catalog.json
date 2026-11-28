@@ -1,7 +1,42 @@
 {
  "format": 1,
- "generated_at": "2026-11-28T17:49:15+00:00",
+ "generated_at": "2026-11-28T17:57:13+00:00",
  "books": [
+  {
+   "id": "arthur-machen-the-hill-of-dreams",
+   "version": 1,
+   "tag": "arthur-machen-the-hill-of-dreams-v1",
+   "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/tag/arthur-machen-the-hill-of-dreams-v1",
+   "date": "2026-11-28T17:57:10Z",
+   "title": "Пагорб мрій",
+   "author": "Артур Мекен",
+   "original": "Arthur Machen. The Hill of Dreams",
+   "models": "MamayLM 27B",
+   "reviewed": 0,
+   "complete": false,
+   "reviewers": [],
+   "categories": [
+    "Художня проза"
+   ],
+   "source": "https://standardebooks.org/ebooks/arthur-machen/the-hill-of-dreams",
+   "notes": "",
+   "cover": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-machen-the-hill-of-dreams-v1/arthur-machen-the-hill-of-dreams.uk.cover.jpg",
+   "files": [
+    {
+     "ext": "epub",
+     "name": "arthur-machen-the-hill-of-dreams.uk.epub",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-machen-the-hill-of-dreams-v1/arthur-machen-the-hill-of-dreams.uk.epub",
+     "size": 521911
+    },
+    {
+     "ext": "md",
+     "name": "arthur-machen-the-hill-of-dreams.uk.md",
+     "url": "https://github.com/Ripchanskiy/knyhozavr-books/releases/download/arthur-machen-the-hill-of-dreams-v1/arthur-machen-the-hill-of-dreams.uk.md",
+     "size": 643837
+    }
+   ],
+   "versions": 1
+  },
   {
    "id": "arthur-conan-doyle-the-white-company",
    "version": 1,
