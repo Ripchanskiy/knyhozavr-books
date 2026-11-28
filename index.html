@@ -110,7 +110,15 @@ h2 {
 .search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
 .found { margin: -8px 0 12px; font-size: 14px; color: var(--muted); min-height: 1.2em; }
 mark { background: var(--accent-soft); color: inherit; border-radius: 3px; padding: 0 1px; }
-.book-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.book-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px 8px; }
+.title-link { color: inherit; text-decoration: none; }
+.title-link:hover { color: var(--accent); text-decoration: underline; }
+.share {
+  flex: none; min-width: 36px; min-height: 36px; padding: 0 8px; margin: -6px -6px 0 0; border-radius: 8px;
+  font: inherit; font-size: 15px; color: var(--muted); background: transparent; border: 1px solid transparent; cursor: pointer;
+}
+.share:hover { border-color: var(--line); color: var(--accent); }
+.share:focus-visible { outline: 3px solid var(--accent); outline-offset: 1px; }
 .book h3 {
   margin: 0; font: 600 18px/1.25 "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
 }
@@ -215,6 +223,9 @@ footer { padding: 16px 0 48px; color: var(--muted); font-size: 14px; text-align:
           немає українською. Усі книжки у форматах EPUB і MD, без реєстрації й реклами.
           Переклади передано в суспільне надбання: їх можна читати, ділитися ними й використовувати як завгодно.
         </p>
+        <p class="lead tg" hidden>
+          <a class="btn secondary" data-tg target="_blank" rel="noopener">Нові книжки в Telegram</a>
+        </p>
       </div>
       <ol class="steps" aria-label="Як з'являється книжка">
         <li><strong>Оригінал</strong><span>Вільне від авторського права видання, переважно зі Standard Ebooks.</span></li>
@@ -263,6 +274,7 @@ footer { padding: 16px 0 48px; color: var(--muted); font-size: 14px; text-align:
 
   <footer>
     Файли зберігаються на <a id="repo" href="https://github.com/Ripchanskiy/knyhozavr-books/releases" target="_blank" rel="noopener">GitHub</a>.
+    <span class="tg" hidden>Нові книжки: <a data-tg target="_blank" rel="noopener">Telegram-канал</a>.</span>
   </footer>
 </div>
 
@@ -270,6 +282,11 @@ footer { padding: 16px 0 48px; color: var(--muted); font-size: 14px; text-align:
 // Books come straight from the GitHub Releases of this repo: one release per version, tag "<book>-v<N>".
 // Nothing to rebuild: a new release shows up here on the next visit.
 const REPO = "Ripchanskiy/knyhozavr-books";
+const TELEGRAM = "https://t.me/knyhozavr"; // the channel; empty: its links stay hidden
+if (TELEGRAM) {
+  for (const a of document.querySelectorAll("[data-tg]")) a.href = TELEGRAM;
+  for (const e of document.querySelectorAll(".tg")) e.hidden = false;
+}
 const API = `https://api.github.com/repos/${REPO}/releases?per_page=100`;
 const CACHE_KEY = "knyhozavr.releases";
 const CACHE_MS = 10 * 60 * 1000; // anonymous API calls are limited to 60 per hour per visitor
@@ -401,11 +418,54 @@ function fileButtons(v, primary) {
     }, `⬇ ${a.ext.toUpperCase()}`, el("small", {}, size(a.size)))));
 }
 
+/** A link to this one book: ?book=<id> (shown alone, with "← Усі книжки"). */
+function bookUrl(b) {
+  const u = new URL(location.pathname, location.origin);
+  u.searchParams.set("book", b.id);
+  return u.toString();
+}
+
+function bookLink(b, ...children) {
+  const a = el("a", { class: "title-link", href: bookUrl(b) }, ...children);
+  a.addEventListener("click", (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return; // a new tab: let the browser do it
+    e.preventDefault();
+    only = b.id;
+    history.pushState(null, "", bookUrl(b));
+    show();
+    window.scrollTo({ top: document.getElementById("books").offsetTop - 16 });
+  });
+  return a;
+}
+
+function shareButton(b, last) {
+  const btn = el("button", { type: "button", class: "share", title: "Поділитися посиланням на книжку",
+    "aria-label": `Поділитися: ${last.title}` }, "🔗");
+  btn.addEventListener("click", async () => {
+    const url = bookUrl(b);
+    try {
+      if (navigator.share && matchMedia("(pointer: coarse)").matches) { // a phone: its own share sheet
+        await navigator.share({ title: `${last.title} — Книгозавр`, url });
+        return;
+      }
+      await navigator.clipboard.writeText(url);
+      btn.textContent = "✓ Скопійовано";
+    } catch (e) {
+      if (e && e.name === "AbortError") return; // closed the share sheet
+      prompt("Посилання на книжку:", url); // no clipboard access: let the reader copy it by hand
+      return;
+    }
+    setTimeout(() => { btn.textContent = "🔗"; }, 1800);
+  });
+  return btn;
+}
+
 function bookCard(b, q) {
   const [last] = b.versions; // readers get the newest version; older ones stay in GitHub Releases
   const cover = b.versions.find((v) => v.cover)?.cover;
   const body = el("div", {},
-    el("div", { class: "book-head" }, el("h3", {}, highlight(last.title, q))),
+    el("div", { class: "book-head" },
+      el("h3", {}, bookLink(b, highlight(last.title, q))), shareButton(b, last)),
     last.author && el("p", { class: "author" }, highlight(last.author, q)),
     last.original && last.original !== `${last.author}. ${last.title}` &&
       el("p", { class: "original", lang: "en" }, highlight(last.original, q)),
@@ -460,6 +520,18 @@ function show() {
     found.textContent = "";
     return root.replaceChildren(el("div", { class: "state" }, "Перші книжки ще вичитуються. Загляньте трохи згодом."));
   }
+  if (only && !allBooks.some((b) => b.id === only)) only = ""; // an old or mistyped link: show all
+  if (only) { // ?book=<id>: a link to one book (from the Telegram channel)
+    const one = allBooks.find((b) => b.id === only);
+    document.title = `${one.versions[0].title} — Книгозавр`;
+    root.replaceChildren(bookCard(one, ""));
+    const all = el("a", { href: "./" }, "Усі книжки");
+    all.addEventListener("click", (e) => { e.preventDefault(); showAll(); });
+    found.replaceChildren("← ", all);
+    document.getElementById("pager").hidden = true;
+    return;
+  }
+  document.title = baseTitle;
   const q = norm(document.getElementById("q").value);
   const books = allBooks.filter((b) => (!q || searchText(b).includes(q))
     && (!category || b.versions[0].categories.includes(category)));
@@ -476,6 +548,16 @@ function show() {
 }
 
 const PAGE = 10; // books per page
+let only = new URLSearchParams(location.search).get("book") || "";
+const baseTitle = document.title;
+
+function showAll() {
+  only = "";
+  const u = new URL(location.href);
+  u.searchParams.delete("book");
+  history.pushState(null, "", u);
+  show();
+}
 let page = pageFromUrl(), shownFor = null;
 
 function pageFromUrl() {
@@ -537,12 +619,21 @@ function pageQuery(n) {
 addEventListener("popstate", () => {
   page = pageFromUrl();
   category = new URLSearchParams(location.search).get("category") || "";
+  only = new URLSearchParams(location.search).get("book") || "";
   shownFor = `${norm(document.getElementById("q").value)}|${category}`; // Back must not reset the page
   renderCategories();
   show();
 });
 
-document.getElementById("q").addEventListener("input", show);
+document.getElementById("q").addEventListener("input", () => {
+  if (only) { // typing a search leaves the one-book view
+    only = "";
+    const u = new URL(location.href);
+    u.searchParams.delete("book");
+    history.replaceState(null, "", u);
+  }
+  show();
+});
 
 let category = new URLSearchParams(location.search).get("category") || ""; // a shareable filter: ?category=Детектив
 
@@ -556,7 +647,9 @@ function renderCategories() {
     const b = el("button", { type: "button", class: "chip", "aria-pressed": String(category === value) }, label);
     b.addEventListener("click", () => {
       category = category === value ? "" : value;
+      only = ""; // a category leaves the one-book view
       const u = new URL(location.href);
+      u.searchParams.delete("book");
       if (category) u.searchParams.set("category", category); else u.searchParams.delete("category");
       history.replaceState(null, "", u);
       renderCategories();

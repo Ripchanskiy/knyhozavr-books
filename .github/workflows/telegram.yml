@@ -1,0 +1,44 @@
+# A new book version on GitHub Releases -> a post in the Telegram channel (EPUB file + caption + link to the site).
+# Old books / a repost: Actions -> "Telegram" -> Run workflow -> the release tag (e.g. arthur-conan-doyle-sir-nigel-v1),
+# or "all": the newest version of every book, oldest first (the app's buttons do the same).
+# Setup (Settings -> Secrets and variables -> Actions):
+#   secret   TELEGRAM_BOT_TOKEN  from @BotFather; the bot is an admin of the channel with "Post messages"
+#   variable TELEGRAM_CHAT_ID    @channel_name (or -100… for a private channel)
+name: Telegram
+
+on:
+  release:
+    types: [published] # the app makes a draft first and publishes it with all files: one post per version
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. arthur-conan-doyle-sir-nigel-v1) or all"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.release.prerelease }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet pillow==11.0.0
+      - name: Post
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ vars.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "::warning::Telegram is not set up (TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID): nothing posted"
+            exit 0
+          fi
+          python .github/scripts/telegram_post.py "$TAG"
