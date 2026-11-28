@@ -1,4 +1,5 @@
-"""Post one book release to the Telegram channel: the EPUB as a file, a short caption, a button to the site.
+"""Post one book release to the Telegram channel: the cover as a big photo with a caption and a button
+to the site, and the EPUB file right under it (a reply to the photo).
 
 Usage: python telegram_post.py <tag>   (e.g. arthur-conan-doyle-sir-nigel-v1)
        python telegram_post.py all     (every book on the site, its newest version, oldest first)
@@ -22,7 +23,7 @@ import urllib.request
 import uuid
 
 CAPTION_MAX = 1024  # Telegram's limit for a file's caption
-PAUSE = 5  # seconds between posts of "all": Telegram limits how fast a bot posts to one channel
+PAUSE = 8  # seconds between books of "all" (2 messages each): Telegram allows a bot ~20 messages/min in a channel
 
 
 def get(url: str, token: str = "") -> bytes:
@@ -85,7 +86,8 @@ def thumbnail(cover: bytes) -> bytes | None:
     return out.getvalue()
 
 
-def send_document(token: str, fields: dict, files: dict[str, tuple[str, bytes, str]], retry: bool = True) -> dict:
+def send(token: str, method: str, fields: dict, files: dict[str, tuple[str, bytes, str]], retry: bool = True) -> dict:
+    """A Bot API call with files (sendPhoto, sendDocument) as multipart/form-data."""
     boundary = uuid.uuid4().hex
     body = io.BytesIO()
     for k, v in fields.items():
@@ -96,7 +98,7 @@ def send_document(token: str, fields: dict, files: dict[str, tuple[str, bytes, s
         body.write(data)
         body.write(b"\r\n")
     body.write(f"--{boundary}--\r\n".encode())
-    req = urllib.request.Request(f"https://api.telegram.org/bot{token}/sendDocument", body.getvalue(),
+    req = urllib.request.Request(f"https://api.telegram.org/bot{token}/{method}", body.getvalue(),
                                  {"Content-Type": f"multipart/form-data; boundary={boundary}"})
     try:
         with urllib.request.urlopen(req, timeout=120) as r:
@@ -107,8 +109,14 @@ def send_document(token: str, fields: dict, files: dict[str, tuple[str, bytes, s
             wait = json.loads(detail).get("parameters", {}).get("retry_after", 30)
             print(f"Telegram asks to wait {wait} s", flush=True)
             time.sleep(wait + 1)
-            return send_document(token, fields, files, retry=False)
+            return send(token, method, fields, files, retry=False)
         sys.exit(f"Telegram: HTTP {err.code}: {detail}")
+
+
+def ok(r: dict) -> dict:
+    if not r.get("ok"):
+        sys.exit(f"Telegram: {r}")
+    return r
 
 
 def post(rel: dict, bot: str, chat: str, site: str) -> None:
@@ -121,21 +129,29 @@ def post(rel: dict, bot: str, chat: str, site: str) -> None:
         sys.exit(f"{tag}: the release has no EPUB")
     cover = next((n for n in assets if re.search(r"\.cover\.(jpe?g|png|webp)$", n)), None)
 
-    files = {"document": (epub, get(assets[epub]), "application/epub+zip")}
-    thumb = thumbnail(get(assets[cover])) if cover else None
-    if thumb:
-        files["thumbnail"] = ("cover.jpg", thumb, "image/jpeg")
     link = f"{site}?book={urllib.parse.quote(book)}"
-    fields = {
-        "chat_id": chat,
-        "caption": caption(meta, notes, tag),
-        "parse_mode": "HTML",
-        "reply_markup": json.dumps({"inline_keyboard": [[{"text": "📖 На сайті: MD, усі версії", "url": link}]]},
-                                   ensure_ascii=False),
-    }
-    r = send_document(bot, fields, files)
-    if not r.get("ok"):
-        sys.exit(f"Telegram: {r}")
+    buttons = json.dumps({"inline_keyboard": [[{"text": "📖 На сайті: MD, усі версії", "url": link}]]},
+                         ensure_ascii=False)
+    text = caption(meta, notes, tag)
+    cover_bytes = get(assets[cover]) if cover else None
+    document = {"document": (epub, get(assets[epub]), "application/epub+zip")}
+    thumb = thumbnail(cover_bytes) if cover_bytes else None
+    if thumb:
+        document["thumbnail"] = ("cover.jpg", thumb, "image/jpeg")
+
+    if cover_bytes:
+        # the cover as a big photo with the caption and the button (a file's thumbnail is tiny),
+        # then the EPUB right under it, as a reply to that photo
+        photo = ok(send(bot, "sendPhoto", {"chat_id": chat, "caption": text, "parse_mode": "HTML",
+                                           "reply_markup": buttons},
+                        {"photo": (cover, cover_bytes, "image/jpeg")}))
+        reply = json.dumps({"message_id": photo["result"]["message_id"]})
+        ok(send(bot, "sendDocument", {"chat_id": chat, "reply_parameters": reply,
+                                      "caption": f"EPUB · {html.escape(meta.get('title') or tag)}",
+                                      "parse_mode": "HTML"}, document))
+    else:  # no cover: one message, the file with the caption
+        ok(send(bot, "sendDocument", {"chat_id": chat, "caption": text, "parse_mode": "HTML",
+                                      "reply_markup": buttons}, document))
     print(f"posted {tag} to {chat}", flush=True)
 
 
